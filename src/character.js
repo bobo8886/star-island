@@ -3,6 +3,7 @@
  */
 (() => {
   'use strict';
+  const l10n=window.IslandI18n?.t||((text)=>text);
   const SIZE=Object.freeze({width:160,height:192,anchorX:80,anchorY:184});
   const DEFAULT_SCALE=100/176;
   const moduleBase=document.currentScript?.src?new URL('../',document.currentScript.src):new URL('./',location.href);
@@ -55,7 +56,7 @@
       while(read<write){const q=queue[read++],x=q%w,y=Math.floor(q/w);for(let yy=Math.max(0,y-1);yy<=Math.min(h-1,y+1);yy++)for(let xx=Math.max(0,x-1);xx<=Math.min(w-1,x+1);xx++){const next=yy*w+xx;if(mask[next]){mask[next]=0;queue[write++]=next;}}}
       if(write>main.length)main=queue.slice(0,write);
     }
-    if(main.length<5000)throw new Error('角色动画帧不完整：'+index);
+    if(main.length<5000)throw new Error(l10n("角色动画帧不完整：")+index);
     let left=w,top=h,right=0,bottom=0;for(let i=3;i<p.length;i+=4)p[i]=0;
     for(const n of main){p[n*4+3]=255;const x=n%w,y=Math.floor(n/w);left=Math.min(left,x);right=Math.max(right,x+1);top=Math.min(top,y);bottom=Math.max(bottom,y+1);}
     const headLimit=top+(bottom-top)*.36;let headLeft=w,headRight=0;
@@ -108,7 +109,7 @@
   }
   function drawPreview(target,options={}){const g=target.getContext('2d'),pose=options.pose||'idle',time=options.time||0;g.clearRect(0,0,target.width,target.height);g.fillStyle='#192a3d';g.fillRect(0,0,target.width,target.height);draw(g,{x:target.width/2,y:target.height*.92,direction:options.direction||'down',walk:pose==='walk'?time*11+1:0,jump:pose==='jump'?.26:0},{...options,time,phase:'night',scale:Math.min(target.height/205,target.width/170),pose});return target;}
   function atlas(variant='girl'){const sheet=document.createElement('canvas');sheet.width=SIZE.width*8;sheet.height=SIZE.height*5;const g=sheet.getContext('2d');g.imageSmoothingEnabled=false;['down','right','up','left'].forEach((dir,row)=>{for(let i=0;i<8;i++)g.drawImage(frame(dir,'walk',i,false,variant),i*SIZE.width,row*SIZE.height);});['idle','sit','look','jump','wave','photo','build'].forEach((pose,i)=>g.drawImage(frame('down',pose,0,false,variant),i*SIZE.width,SIZE.height*4));return sheet;}
-  const ready=Promise.all(Object.entries(files).map(([variant,path])=>new Promise(resolve=>{const image=new Image();images[variant]=image;image.onload=()=>resolve(true);image.onerror=()=>{errors.push(path);resolve(false);};image.src=window.ISLAND_ASSETS?.[path]||new URL(path,moduleBase).href;}))).then(results=>{if(!results.every(Boolean))return false;try{prepareAnimation();prepared=true;return true;}catch(error){errors.push('角色动画预处理：'+error.message);return false;}});
+  const ready=Promise.all(Object.entries(files).map(([variant,path])=>new Promise(resolve=>{const image=new Image();images[variant]=image;image.onload=()=>resolve(true);image.onerror=()=>{errors.push(path);resolve(false);};image.src=window.ISLAND_ASSETS?.[path]||new URL(path,moduleBase).href;}))).then(results=>{if(!results.every(Boolean))return false;try{prepareAnimation();prepared=true;return true;}catch(error){errors.push(l10n("角色动画预处理：")+error.message);return false;}});
   const designImage=(variant='girl')=>variant==='boy'?(window.ISLAND_ASSETS?.['assets/companion-design.png']||'assets/companion-design.png'):(window.ISLAND_CHARACTER_ART||'assets/character-design.png');
-  window.IslandCharacter={draw,frame,atlas,drawPreview,ready,isReady:()=>prepared,size:SIZE,sourceFiles:files,errors,designImage,name:'拾光旅人 · 小满',description:'让原画里的笑容，真的陪你走进每一片风景。',companionName:'同行旅人 · 阿屿',companionDescription:'把风景装进相机，把温柔留在你身边。',rendering:'reference-atlas',animationVersion:'full-pose-v6',motionRendering:'full-pose-atlas-v6',walkFiles:Object.freeze(Object.fromEntries(Object.entries(files).filter(([key])=>key.includes('-')))),idleFile:files.idle,getAnimationInfo:()=>JSON.parse(JSON.stringify(animationInfo))};
+  window.IslandCharacter={draw,frame,atlas,drawPreview,ready,isReady:()=>prepared,size:SIZE,sourceFiles:files,errors,designImage,name:l10n("拾光旅人 · 小满"),description:l10n("让原画里的笑容，真的陪你走进每一片风景。"),companionName:l10n("同行旅人 · 阿屿"),companionDescription:l10n("把风景装进相机，把温柔留在你身边。"),rendering:'reference-atlas',animationVersion:'full-pose-v6',motionRendering:'full-pose-atlas-v6',walkFiles:Object.freeze(Object.fromEntries(Object.entries(files).filter(([key])=>key.includes('-')))),idleFile:files.idle,getAnimationInfo:()=>JSON.parse(JSON.stringify(animationInfo))};
 })();

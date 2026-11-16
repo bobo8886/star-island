@@ -1,8 +1,9 @@
 /* Screen-space discovery signs. Original item references stay intact for navigation. */
 (() => {
   'use strict';
+  const l10n=window.IslandI18n?.t||((text)=>text);
   const INK='#183f49', CREAM='#fff4d8';
-  const TYPES={portal:{icon:'↗',color:'#f4d99d',name:'出口'},memory:{icon:'◇',color:'#e3bded',name:'回忆'},story:{icon:'✦',color:'#b9e0cc',name:'故事'},activity:{icon:'♡',color:'#fac4b7',name:'互动'},letter:{icon:'✉',color:'#f4c5cf',name:'写信'},landmark:{icon:'⌂',color:'#c1ddeb',name:'地点'}};
+  const TYPES={portal:{icon:'↗',color:'#f4d99d',name:l10n("出口")},memory:{icon:'◇',color:'#e3bded',name:l10n("回忆")},story:{icon:'✦',color:'#b9e0cc',name:l10n("故事")},activity:{icon:'♡',color:'#fac4b7',name:l10n("互动")},letter:{icon:'✉',color:'#f4c5cf',name:l10n("写信")},landmark:{icon:'⌂',color:'#c1ddeb',name:l10n("地点")}};
   const HUD='.topbar,#quest-panel,#world-label,.compass,#interact-hint,#toast,.bottom-bar,#joystick,.touch-actions';
   const overlaps=(a,b,p=0)=>a.x<b.x+b.w+p&&a.x+a.w>b.x-p&&a.y<b.y+b.h+p&&a.y+a.h>b.y-p;
   const contains=(r,x,y)=>x>=r.x&&x<=r.x+r.w&&y>=r.y&&y<=r.y+r.h;
@@ -29,7 +30,7 @@
       if(w.companion==='boy'&&w.spirit)this.actors.push(actor(w.spirit,true));
       else if(w.companion!=='none'&&w.spirit){const s=w.toScreen(w.spirit.x,w.spirit.y);this.actors.push({x:s.x-25*scale,y:s.y-53*scale,w:50*scale,h:65*scale});}
     }
-    direction(item){const p=this.world.player,dx=item.x-p.x,dy=item.y-p.y;if(Math.hypot(dx,dy)<82)return'出口';const a=Math.atan2(dy,dx);return ['东','东南','南','西南','西','西北','北','东北'][(Math.round(a/(Math.PI/4))+8)%8];}
+    direction(item){const p=this.world.player,dx=item.x-p.x,dy=item.y-p.y;if(Math.hypot(dx,dy)<82)return l10n("出口");const a=Math.atan2(dy,dx);return [l10n("东"),l10n("东南"),l10n("南"),l10n("西南"),l10n("西"),l10n("西北"),l10n("北"),l10n("东北")][(Math.round(a/(Math.PI/4))+8)%8];}
     fitText(c,text,width){const value=String(text);if(c.measureText(value).width<=width)return value;let low=0,high=value.length;while(low<high){const middle=Math.ceil((low+high)/2);if(c.measureText(value.slice(0,middle)+'…').width<=width)low=middle;else high=middle-1;}return value.slice(0,low)+'…';}
     layout(c){
       const w=this.world,mobile=!!w.mobile,now=typeof performance!=='undefined'?performance.now():0;
@@ -40,7 +41,7 @@
       for(let i=0;i<items.length;i++){
         const item=items[i],s=w.toScreen(item.x,item.y),type=TYPES[item.type]?item.type:'landmark';
         if(!Number.isFinite(s.x)||!Number.isFinite(s.y)||s.x<13||s.x>w.width-13||s.y<28||s.y>w.height-13){offscreen.push(item.id);continue;}
-        const distance=Math.hypot(item.x-w.player.x,item.y-w.player.y),point={item,id:item.id,name:String(item.name||item.theme||'地点'),number:i+1,type,style:TYPES[type],x:s.x,y:s.y,near:distance<82,distance,seen:!!w.seen?.(item),marker:{x:s.x-13,y:s.y-38,w:26,h:26},label:null,listed:false};
+        const distance=Math.hypot(item.x-w.player.x,item.y-w.player.y),point={item,id:item.id,name:String(item.name||item.theme||l10n("地点")),number:i+1,type,style:TYPES[type],x:s.x,y:s.y,near:distance<82,distance,seen:!!w.seen?.(item),marker:{x:s.x-13,y:s.y-38,w:26,h:26},label:null,listed:false};
         // A point behind a HUD panel is genuinely occluded, never moved to a false map position.
         if(this.hud.some(r=>overlaps(r,point.marker))){suppressed.push(item.id);continue;}
         point.markerVisible=!this.actors.some(r=>overlaps(r,point.marker));
@@ -64,7 +65,7 @@
       }
       let labelCount=0;const maxLabels=mobile?(w.landscape?5:4):12;
       for(const p of ranked){
-        const status=p.type==='letter'?(p.near?(mobile?'点此写信':'F 写信'):w.state.treeLetter?.body?'续写':'写信'):p.near?(mobile?(p.type==='portal'?'点此进入':'点此互动'):'F 互动'):p.seen?(p.type==='activity'?'✓ 再玩':'✓ 重读'):'';
+        const status=p.type==='letter'?(p.near?(mobile?l10n("点此写信"):l10n("F 写信")):w.state.treeLetter?.body?l10n("续写"):l10n("写信")):p.near?(mobile?(p.type==='portal'?l10n("点此进入"):l10n("点此互动")):l10n("F 互动")):p.seen?(p.type==='activity'?l10n("✓ 再玩"):l10n("✓ 重读")):'';
         const prefix=p.type==='portal'?this.direction(p.item)+' · ':'';
         const maxText=mobile?155:218;
         p.text=this.fitText(c,prefix+p.name,maxText);p.status=status;
@@ -120,7 +121,7 @@
           if(p.status){const tw=c.measureText(p.text).width,chip={x:r.x+29+tw,y:r.y+5,w:r.w-35-tw,h:r.h-10};rounded(c,chip,4);c.fillStyle=p.near?'#f6e4b8':'#bde1cd';c.fill();c.fillStyle=INK;c.font='600 10px "Microsoft YaHei",sans-serif';c.fillText(p.status,chip.x+5,r.y+r.h/2);}
         }
       }
-      if(this.list){const {rect:r,entries}=this.list;rounded(ctx,r,9);ctx.fillStyle='#fff3daf5';ctx.fill();ctx.strokeStyle='#d7bd86';ctx.lineWidth=1;ctx.stroke();ctx.font='600 10px "Microsoft YaHei",sans-serif';ctx.fillStyle='#577270';ctx.fillText('附近地点 · 点名称前往',r.x+11,r.y+13);for(let i=0;i<entries.length;i++){const p=entries[i],y=r.y+23+i*32;ctx.fillStyle=INK;ctx.beginPath();ctx.arc(r.x+20,y+16,10,0,Math.PI*2);ctx.fill();ctx.fillStyle=CREAM;ctx.textAlign='center';ctx.font='bold 10px sans-serif';ctx.fillText(String(p.number),r.x+20,y+16);ctx.textAlign='left';ctx.font='600 11px "Microsoft YaHei",sans-serif';ctx.fillStyle=INK;ctx.fillText(this.fitText(ctx,p.name,r.w-75),r.x+39,y+16);ctx.fillStyle='#507f70';ctx.fillText(p.type==='portal'?'↗':p.seen?'✓':p.near&&!w.mobile?'F':'›',r.x+r.w-23,y+16);}}
+      if(this.list){const {rect:r,entries}=this.list;rounded(ctx,r,9);ctx.fillStyle='#fff3daf5';ctx.fill();ctx.strokeStyle='#d7bd86';ctx.lineWidth=1;ctx.stroke();ctx.font='600 10px "Microsoft YaHei",sans-serif';ctx.fillStyle='#577270';ctx.fillText(l10n("附近地点 · 点名称前往"),r.x+11,r.y+13);for(let i=0;i<entries.length;i++){const p=entries[i],y=r.y+23+i*32;ctx.fillStyle=INK;ctx.beginPath();ctx.arc(r.x+20,y+16,10,0,Math.PI*2);ctx.fill();ctx.fillStyle=CREAM;ctx.textAlign='center';ctx.font='bold 10px sans-serif';ctx.fillText(String(p.number),r.x+20,y+16);ctx.textAlign='left';ctx.font='600 11px "Microsoft YaHei",sans-serif';ctx.fillStyle=INK;ctx.fillText(this.fitText(ctx,p.name,r.w-75),r.x+39,y+16);ctx.fillStyle='#507f70';ctx.fillText(p.type==='portal'?'↗':p.seen?'✓':p.near&&!w.mobile?'F':'›',r.x+r.w-23,y+16);}}
       ctx.restore();
     }
     hitTest(x,y){if(!this.enabled()||this.lastSnapshot.region!==this.world.regionId||this.hud.some(r=>contains(r,x,y))||this.actors.some(r=>contains(r,x,y)))return null;for(const h of this.hits)if(contains(h.rect,x,y))return h.item;return null;}

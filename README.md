@@ -31,7 +31,9 @@ A customizable birthday adventure that runs in your browser, online or offline. 
 - **Play offline:** download `star-island-v6.2.2-offline.zip` from [Releases](https://github.com/bobo8886/star-island/releases/latest), extract it, and open `星屿寻迹.html`. A standalone HTML download is also available.
 - **Work on the code:** get the [source](https://github.com/bobo8886/star-island/archive/refs/heads/main.zip) and follow the [development guide](docs/DEVELOPMENT.md).
 
-No account or developer tools are required to play. On phones, the live game is the easiest option; file preview apps may not run HTML games. The game interface and detailed guides currently use Simplified Chinese.
+No account or developer tools are required to play. On phones, the live game is the easiest option; file preview apps may not run HTML games.
+
+**中文 / English:** choose your language on the first visit (Chinese is selected by default). Change it anytime from the top bar or Settings. Built-in stories, interactions, letters, gift editor and birthday fireworks are bilingual. Progress stays intact, and your own writing and uploaded audio remain unchanged. Detailed guides are currently in Chinese.
 
 ## 🎁 Make it a personal gift
 

@@ -14,7 +14,9 @@ npm run build
 npm run check:bundle
 ```
 
-`npm test` 包含八组核心检查：主岛路线、跨区路线、湖谷活动路线、活动存档、个性化内容、树信存档、路标布局与移动时间步，无须安装浏览器。构建和一致性检查会核对离线包中的源码、样式、图片和完整许可。
+`npm test` 包含九组核心检查：主岛路线、跨区路线、湖谷活动路线、活动存档、个性化内容、树信存档、路标布局、移动时间步与双语模板，无须安装浏览器。构建和一致性检查会核对离线包中的源码、样式、图片和完整许可。
+
+语言改动另运行 `python tests/language-flow.py` 和 `python tests/language-offline.py`（先 `npm start`，并生成最新单文件）。检查真实 UI 选择、英文通关、信纸 PNG、390px 布局、切换保留自定义内容、离线礼物和存储不可用场景。详情见 [双语维护说明](LOCALIZATION.md)。
 
 向 `main` 推送或提交 Pull Request 时，[GitHub Actions](https://github.com/bobo8886/star-island/actions/workflows/check.yml) 会自动运行上述检查，并确认提交的离线文件与重新构建的结果一致。首页的 Core checks 徽章展示实际结果；浏览器与视觉回归仍需按下方指南单独运行。
 

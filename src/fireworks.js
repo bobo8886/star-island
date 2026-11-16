@@ -2,14 +2,15 @@
  * no timers/listeners, no frame readbacks, and draw never advances simulation. */
 (() => {
   'use strict';
+  const l10n=window.IslandI18n?.t||((text)=>text);
   const TAU=Math.PI*2,PERIOD=7,MAX_PARTICLES=560,MAX_TEXT_POINTS=280;
   const clamp=(n,a,b)=>Math.max(a,Math.min(b,n));
   const ease=n=>1-Math.pow(1-clamp(n,0,1),3);
   const themes={
-    home:{name:'桃金心愿',colors:['#ff9dbb','#ffd991','#fff0d8'],shapes:['heart','star','heart','flower'],text:'#ffadc8'},
-    forest:{name:'花间流萤',colors:['#dfb5ff','#bdf1bf','#ffdb9b'],shapes:['flower','flower','star','flower'],text:'#e5c4ff'},
-    coast:{name:'潮汐星愿',colors:['#8de8ed','#ffdb87','#ffb5bc'],shapes:['star','ring','star','heart'],text:'#a8f0ed'},
-    lake:{name:'月下莲光',colors:['#a7cfff','#d7bcff','#fff1c2'],shapes:['lotus','star','heart','lotus'],text:'#c8d6ff'}
+    home:{name:l10n("桃金心愿"),colors:['#ff9dbb','#ffd991','#fff0d8'],shapes:['heart','star','heart','flower'],text:'#ffadc8'},
+    forest:{name:l10n("花间流萤"),colors:['#dfb5ff','#bdf1bf','#ffdb9b'],shapes:['flower','flower','star','flower'],text:'#e5c4ff'},
+    coast:{name:l10n("潮汐星愿"),colors:['#8de8ed','#ffdb87','#ffb5bc'],shapes:['star','ring','star','heart'],text:'#a8f0ed'},
+    lake:{name:l10n("月下莲光"),colors:['#a7cfff','#d7bcff','#fff1c2'],shapes:['lotus','star','heart','lotus'],text:'#c8d6ff'}
   };
   const schedule=[.08,1.18,3.15,4.82];
   const canvas=(w,h)=>{const c=document.createElement('canvas');c.width=Math.ceil(w);c.height=Math.ceil(h);return c;};
@@ -25,14 +26,14 @@
   class IslandFireworks{
     constructor(world){
       this.world=world;this.active=false;this.reduced=false;this.region='';this.time=0;this.cycle=0;this.phase=0;this.mask=0;
-      this.particles=[];this.rockets=[];this.blooms=[];this.layouts=new Map();this.glows=new Map();this.outlines=new Map();this.currentLayout=null;this.text='生日快乐!';
+      this.particles=[];this.rockets=[];this.blooms=[];this.layouts=new Map();this.glows=new Map();this.outlines=new Map();this.currentLayout=null;this.text=l10n("生日快乐!");
       this.births=0;this.bursts=0;this.peakParticles=0;this.seed=71377;this.glyphBuilds=0;this.hiddenSkips=0;
     }
     random(){this.seed=(Math.imul(this.seed,1664525)+1013904223)>>>0;return this.seed/4294967296;}
     eligible(){return !!(this.world.started&&this.world.state?.finished);}
     readText(){
       let value;try{value=window.IslandPersonalization?.text('ending.fireworkText');}catch{}
-      return typeof value==='string'&&value.trim()&&value!=='ending.fireworkText'?Array.from(value.trim().replace(/\s+/g,' ')).slice(0,64).join(''):'生日快乐!';
+      return typeof value==='string'&&value.trim()&&value!=='ending.fireworkText'?Array.from(value.trim().replace(/\s+/g,' ')).slice(0,64).join(''):l10n("生日快乐!");
     }
     reset(){this.time=0;this.phase=0;this.cycle=0;this.mask=0;this.particles.length=0;this.rockets.length=0;this.blooms.length=0;}
     sync(){
@@ -116,7 +117,12 @@
       let lines=[this.text];
       if(landscape&&Array.from(this.text).length<=8)while(font>24&&measure.measureText(this.text).width>maxWidth){font--;measure.font='900 '+font+'px "Microsoft YaHei","PingFang SC",sans-serif';}
       while(font>18&&measure.measureText(this.text).width>maxWidth*1.95){font-=2;measure.font='900 '+font+'px "Microsoft YaHei","PingFang SC",sans-serif';}
-      if(measure.measureText(this.text).width>maxWidth){lines=[''];for(const char of Array.from(this.text)){if(measure.measureText(lines.at(-1)+char).width>maxWidth)lines.push(char);else lines[lines.length-1]+=char;}}
+      if(measure.measureText(this.text).width>maxWidth){
+        if(/^[\x20-\x7e]+$/.test(this.text)&&this.text.includes(' ')){
+          const words=this.text.split(/\s+/);while(font>18&&words.some(word=>measure.measureText(word).width>maxWidth)){font--;measure.font='900 '+font+'px "Microsoft YaHei","PingFang SC",sans-serif';}
+          lines=[''];for(const word of words){const next=lines.at(-1)?lines.at(-1)+' '+word:word;if(lines.at(-1)&&measure.measureText(next).width>maxWidth)lines.push(word);else lines[lines.length-1]=next;}
+        }else{lines=[''];for(const char of Array.from(this.text)){if(measure.measureText(lines.at(-1)+char).width>maxWidth)lines.push(char);else lines[lines.length-1]+=char;}}
+      }
       const textWidth=Math.max(...lines.map(line=>measure.measureText(line).width)),lineHeight=font*1.22,textHeight=lineHeight*lines.length;
       const centerX=landscape?w-24-textWidth/2:portrait?w*.5:w*.56;
       let top=capturing?Math.max(70,h*.12):landscape?90:portrait?Math.max(116,h*.14):Math.max(112,h*.14);

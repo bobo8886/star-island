@@ -3,6 +3,7 @@
  */
 (() => {
   'use strict';
+  const l10n=window.IslandI18n?.t||((text)=>text);
   const PATH='assets/sandcastle-stages.png', SIZE=576, SCALE=.31;
   const BOUNDS=[[86,282,563,505],[60,255,551,506],[60,214,568,561],[33,14,565,563]];
   const frames=[],bases=[],flags=[];
@@ -42,7 +43,7 @@
       }catch(e){error=String(e);}
       resolve(loaded);
     };
-    img.onerror=()=>{error='沙堡素材未能加载';resolve(false);};
+    img.onerror=()=>{error=l10n("沙堡素材未能加载");resolve(false);};
     img.src=window.ISLAND_ASSETS?.[PATH]||PATH;
   });
   function draw(ctx,options={}){

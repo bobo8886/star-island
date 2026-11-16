@@ -1,5 +1,6 @@
 (() => {
   'use strict';
+  const l10n=window.IslandI18n?.t||((text)=>text);
   const suffix = ISLAND_CONTENT.giftId ? '-' + ISLAND_CONTENT.giftId : '';
   const KEY = 'star-island-v1' + suffix;
   let available = true;
@@ -67,11 +68,11 @@
   let dbPromise;
   function database() {
     if (!dbPromise) dbPromise = new Promise((resolve, reject) => {
-      if (!window.indexedDB) return reject(new Error('当前浏览器不支持保存照片和语音。'));
+      if (!window.indexedDB) return reject(new Error(l10n("当前浏览器不支持保存照片和语音。")));
       const request = indexedDB.open('star-island-media' + suffix, 1);
       request.onupgradeneeded = () => request.result.createObjectStore('media');
       request.onsuccess = () => resolve(request.result);
-      request.onerror = () => reject(new Error('无法保存媒体，请尝试普通浏览模式。'));
+      request.onerror = () => reject(new Error(l10n("无法保存媒体，请尝试普通浏览模式。")));
     });
     return dbPromise;
   }
@@ -89,14 +90,14 @@
     const db = await database();
     return new Promise((resolve, reject) => { const tx = db.transaction('media', 'readwrite');
       if (value) tx.objectStore('media').put(value, key); else tx.objectStore('media').delete(key);
-      tx.oncomplete = resolve; tx.onerror = () => reject(new Error('媒体保存失败，存储空间可能不足。')); });
+      tx.oncomplete = resolve; tx.onerror = () => reject(new Error(l10n("媒体保存失败，存储空间可能不足。"))); });
   }
   async function replaceMedia(media) {
     const db = await database();
     return new Promise((resolve, reject) => {
       const tx = db.transaction('media', 'readwrite'); const store = tx.objectStore('media'); store.clear();
       Object.entries(media).forEach(([key, value]) => store.put(value, key));
-      tx.oncomplete = resolve; tx.onerror = () => reject(new Error('恢复媒体失败，原存档尚未修改。'));
+      tx.oncomplete = resolve; tx.onerror = () => reject(new Error(l10n("恢复媒体失败，原存档尚未修改。")));
     });
   }
   window.IslandStore = { load, save, normalize, normalizeTreeLetter, mediaAll, putMedia, replaceMedia, get available() { return available; } };

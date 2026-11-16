@@ -32,7 +32,7 @@ jobs:
           check-latest: true
           package-manager-cache: false
 
-      - name: Run eight core suites
+      - name: Run core suites including localization
         run: npm test
 
       - name: Build the offline game

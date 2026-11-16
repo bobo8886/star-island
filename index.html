@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="studio.css">
   <link rel="stylesheet" href="tree-letter.css">
+  <link rel="stylesheet" href="language.css">
 </head>
 <body>
   <canvas id="world" tabindex="0" aria-label="星屿探索地图：方向键或 WASD 移动，Shift 快走，空格跳跃，F 拾取或互动。触碰物件也能发现剧情，使用岛屿地图前往各个区域。"></canvas>
@@ -17,6 +18,7 @@
   <header class="topbar">
     <a class="brand" href="#" aria-label="星屿寻迹首页"><span class="brand-star" aria-hidden="true">✦</span><span>星屿寻迹<small> A LITTLE ISLAND, ALL FOR YOU</small></span></a>
     <div class="top-actions">
+      <button id="language-button" class="icon-button language-trigger" aria-label="语言 / Language" title="语言 / Language">中 / EN</button>
       <button id="character-button" class="icon-button" aria-label="角色与旅伴" title="角色与旅伴 · 选择陪你旅行的人" onclick="window.dispatchEvent(new Event('island:character'))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 9a5 5 0 0 1 10 0v3a5 5 0 0 1-10 0V9Zm-3 12v-2c0-2 3-4 8-4s8 2 8 4v2M9 9h1m4 0h1M6 5 4 3m14 2 2-2"/></svg></button>
       <button id="time-button" class="time-button" title="切换岛屿时光"><span id="time-icon">☾</span><span id="time-label">星夜</span><span class="time-separator"></span><time id="clock">--:--</time></button>
       <button id="sound-button" class="icon-button" aria-label="开启声音" title="开启声音"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path class="sound-waves" d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/><path class="sound-off" d="m16 9 6 6m0-6-6 6"/></svg></button>
@@ -63,6 +65,8 @@
   <noscript>请开启 JavaScript，星屿才能点亮。</noscript>
   <script id="island-license" type="text/plain">Copyright (c) 2026 bobo8886. 免费自用、修改及非商业分享；禁止商用、转卖和收费交付。完整条款：https://github.com/bobo8886/star-island/blob/main/LICENSE</script>
   <script id="island-notices" type="text/plain">素材与第三方说明：https://github.com/bobo8886/star-island/blob/main/THIRD_PARTY_NOTICES.md</script>
+  <script src="src/locales/en.js"></script>
+  <script src="src/i18n.js"></script>
   <script src="src/content.js"></script>
   <script src="src/regions.js"></script>
   <script src="src/adventure.js"></script>
