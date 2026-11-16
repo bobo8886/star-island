@@ -1,6 +1,7 @@
 {
   "name": "star-island-time-capsule",
-  "version": "6.2.0",
+  "version": "6.2.1",
+  "license": "SEE LICENSE IN LICENSE",
   "private": true,
   "description": "星屿寻迹：给你的时光盲盒 — a playable offline-first H5 birthday adventure",
   "scripts": {
@@ -8,6 +9,7 @@
     "build": "node scripts/build-standalone.cjs",
     "test": "node scripts/test-core.cjs",
     "check:bundle": "node tests/bundle-integrity.cjs",
+    "release:package": "python scripts/package-release.py",
     "test:navigation": "node tests/navigation.cjs",
     "test:regions": "node tests/regions-navigation.cjs"
   }

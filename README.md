@@ -1,8 +1,14 @@
 # 星屿寻迹：给你的时光盲盒
 
+[![版本 6.2.1](https://img.shields.io/badge/version-6.2.1-c18c78)](https://github.com/bobo8886/star-island-time-capsule/releases/latest)
+[![非商业使用许可](https://img.shields.io/badge/license-Noncommercial-647f67)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/bobo8886/star-island-time-capsule?style=flat)](https://github.com/bobo8886/star-island-time-capsule/stargazers)
+
 一个可以编辑后送给任何人的生日探索 H5 游戏。默认使用通用称呼与故事模板，生日日期留空；欢迎页点击「制作一份专属礼物」即可打开星屿礼物工坊。四座可往返的星屿、19 个剧情物件、四条支线、两位原创角色和八种日常互动都可以承载自己的文字。采用原生 Canvas 2D、本地图片与原创 Web Audio 音乐，没有运行时依赖，也不需要注册账号。
 
-**[在线试玩](https://bobo8886.github.io/star-island-time-capsule/) · [下载完整项目 ZIP](https://github.com/bobo8886/star-island-time-capsule/archive/refs/heads/main.zip) · [仓库首页](https://github.com/bobo8886/star-island-time-capsule)**
+**可以免费自用、修改、送给别人玩和非商业分享；禁止商用、转卖及收费交付。** 本项目采用[自定义非商业许可](LICENSE)，属于公开源码、限制商业使用的项目。
+
+**[在线试玩](https://bobo8886.github.io/star-island-time-capsule/) · [正式版下载](https://github.com/bobo8886/star-island-time-capsule/releases/latest) · [完整源码 ZIP](https://github.com/bobo8886/star-island-time-capsule/archive/refs/heads/main.zip) · [更新日志](CHANGELOG.md)**
 
 | 你想做什么 | 从这里开始 |
 | --- | --- |
@@ -26,6 +32,8 @@
 **保存到浏览器只改变你本机的内容。** 要把定制内容送出去，需要导出专属礼物；只发送原试玩网址不会带上你写的文字。许愿树的小信则可以单独生成 PNG，再通过微信相册发送。
 
 ## 立即游玩
+
+普通玩家可在 **[Releases](https://github.com/bobo8886/star-island-time-capsule/releases/latest)** 下载 `star-island-v6.2.1-offline.zip`：解压后包含游戏、使用说明和许可。也可只下载 `star-island-v6.2.1.html`，完整许可已保留在单文件中。想修改源码、地图或素材时，再下载完整项目。
 
 **最方便：用浏览器打开 `星屿寻迹.html`。** 四张地图、完整角色动作图、沙堡 / 湖谷道具、礼物工坊、信纸样式和原创音乐均已包含，可以离线运行。素材准备好后，开始按钮会亮起。
 
@@ -220,3 +228,29 @@ python tests/together-offline.py
 浏览器测试使用 Python Playwright 与已安装的 Microsoft Edge，运行时需启动端口 4173 的本地服务器。测试覆盖路径、真实输入、完整角色姿势、声音、可编辑文案、完整生日剧情、存档与媒体、礼物打包和手机布局；截图与结果在 `output/`，详细验收见 `VERIFICATION.md`。`character-v4.py` 继续检查通用图集质量，当前行走用 `animation-v6.py` 和实景 QA 检查；旧 `side-walk.py` / `gait-contact.py` 面向历史局部腿部动画，不用于证明 v6 全身步态自然。
 
 `output/` 是运行测试后生成的本地目录，包含临时截图、下载文件和测试备份，不随仓库上传。验收记录中提到的历史报告路径指原开发环境；可公开展示的截图集中在 `docs/images/`，新环境可按教程重新生成自己的报告。
+
+## 使用许可
+
+完整条款见 [LICENSE](LICENSE)，版权与项目地址见 [NOTICE](NOTICE)。
+
+| 用途 | 是否允许 |
+| --- | --- |
+| 自己玩、学习、修改、制作个人生日礼物 | 允许，免费非商业使用 |
+| 免费送给亲友，或免费公开分享给别人玩 | 允许，分发软件时保留许可和原作者声明 |
+| 把游戏或修改版、源码、素材转手出售 | 不允许 |
+| 收费定制生日网页、收代制作或代部署费用 | 不允许 |
+| 付费下载、会员解锁、商业广告变现或推广获客 | 不允许 |
+
+自己的祝福文字、照片和语音仍属于自己或原权利人，不会自动授权给项目作者。私人信件图片无需加作者水印；发送游戏或素材文件时需保留适用的许可。离线游戏和工坊导出的专属 HTML 会携带完整声明。
+
+这是自定义非商业许可，不是 MIT，也不宣称为 OSI 认可的开源许可证。第三方与生成素材的范围见 [素材来源和第三方说明](THIRD_PARTY_NOTICES.md)。
+
+## 参与、反馈与版本
+
+- **发现问题或有新玩法建议**：使用 [中文反馈模板](https://github.com/bobo8886/star-island-time-capsule/issues/new/choose)。请提供复现步骤，勿上传自己的完整私人存档。
+- **愿意改进代码、文档或素材**：先看 [贡献指南](CONTRIBUTING.md)，再提交 Pull Request。
+- **发现安全问题**：按 [安全政策](SECURITY.md) 使用私密报告渠道。
+- **下载固定版本与查看变化**：[Releases](https://github.com/bobo8886/star-island-time-capsule/releases) / [CHANGELOG](CHANGELOG.md)。
+- **素材和工具来源**：[第三方与素材声明](THIRD_PARTY_NOTICES.md) / [素材清单](assets/manifest.json)。
+
+欢迎提交体验反馈和非商业改进。感谢每一位认真写祝福、测试游戏、反馈问题的人。

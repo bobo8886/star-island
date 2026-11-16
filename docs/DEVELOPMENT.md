@@ -68,13 +68,30 @@ npm run check:bundle
 
 `npm test` 会自动创建输出目录，独立运行八组检查：主岛路线、跨区路线、湖谷活动路线、活动存档、301 项个性化内容、树信存档与迁移、路标布局、移动时间步。它不依赖浏览器。
 
-`npm run build` 将 19 个源码模块、样式和 17 张运行时 PNG 打包为 `星屿寻迹.html`。`npm run check:bundle` 核对离线包与当前源码、样式和图片是否一致；修改源码后不重打包会让此检查报错。
+`npm run build` 将 19 个源码模块、样式和 17 张运行时 PNG 打包为 `星屿寻迹.html`，并在文件中保留完整的 `LICENSE`、`NOTICE` 和 `THIRD_PARTY_NOTICES.md`。`npm run check:bundle` 核对离线包与当前源码、样式、图片和许可声明是否一致；修改这些文件后需要重新打包。
+
+### 制作正式下载包
+
+安装 Python 后，在项目根目录执行：
+
+```sh
+npm run release:package
+```
+
+此命令只用 Python 标准库，不需要安装浏览器测试依赖。它会重新构建、检查单文件一致性，再生成 `output/releases/v6.2.1/`（版本号来自 `package.json`）：
+
+- `star-island-v6.2.1.html`：可以直接打开的离线游戏，内嵌完整许可与来源声明。
+- `star-island-v6.2.1-offline.zip`：包含游戏、`LICENSE`、`NOTICE`、`THIRD_PARTY_NOTICES.md` 和玩家说明 `START_HERE.md`。
+- `SHA256SUMS.txt`：上述两个下载文件的 SHA-256 校验和。
+- `build-report.json`：供本地检查的生成记录，无须作为玩家下载附件。
+
+维护者完成检查后，可将前三项上传到对应版本的 GitHub Release；脚本本身不会创建标签、联网或发布文件。发布前请确认构建内容与版本标签一致，并保留所有适用的许可声明。GitHub 自动附带的 Source code ZIP 是源码包，与供玩家使用的 offline ZIP 不同。
 
 发布前还应手动打开离线文件，至少体验：移动、一个交互、工坊保存与导出、树信图片下载。完整生日流程是收集五枚水晶、连星、打开盲盒、读信。
 
 ## 5. 可选的浏览器回归
 
-仅开发检查需要 Python。普通玩家不用安装这些工具。
+浏览器回归需要 Python 和下列依赖；上面的正式下载包脚本仅需要 Python 标准库。普通玩家不用安装这些工具。
 
 本次开发环境使用 Python 3.14、Microsoft Edge，Python 依赖版本记录在 `requirements-dev.txt`。可使用兼容这些依赖的 Python 版本，先创建虚拟环境：
 
@@ -97,6 +114,14 @@ macOS / Linux：
 以下示例的 `python` 代表安装了这些依赖的解释器；也可以替换为上面的完整路径。已有回归脚本使用 Playwright 的 `channel='msedge'`，需要安装 Microsoft Edge；不要只安装 Chromium 后认为两个浏览器通道等价。实际真机 Safari、微信内置浏览器不在这些自动化脚本的验证范围内。
 
 先开一个终端运行 `npm start`，再开另一个终端执行所需检查。
+
+许可与专属礼物导出检查可以直接在离线文件上运行，无须启动服务器：
+
+```sh
+python tests/release-license-v621.py
+```
+
+它通过实际工坊操作导出新的礼物 HTML，再打开礼物，检查完整许可和来源声明仍在文件中；输出位于 `output/release-v621/`。
 
 ### 树信与界面检查
 
@@ -152,3 +177,5 @@ git push origin main
 素材清单及生成来源在 [`assets/manifest.json`](../assets/manifest.json)，角色提示词与校准说明也保留在 assets 中。新增树信边饰和烟花由本项目 Canvas 代码绘制，音效由 Web Audio 生成，不调用外部图片或音乐服务。
 
 这是纯前端、无账号的本地存档游戏。没有多人联机、云同步、自动微信发送或服务端邮件功能；若以后增加这些能力，应作为明确的新功能设计，不要仅凭新增按钮声称已经实现。
+
+使用和分发范围见 [LICENSE](../LICENSE)，素材及开发依赖见 [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md)。免费自用、修改和非商业分享可以进行；转卖、收费定制交付、广告变现等商业用途不在许可范围内。玩家自己的文字、照片和语音仍归原权利人。

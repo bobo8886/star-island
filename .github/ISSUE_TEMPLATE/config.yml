@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 游玩与制作教程
+    url: https://github.com/bobo8886/star-island-time-capsule/blob/main/README.md
+    about: 先查看操作、修改信息、保存信件和分享礼物的方法。
+  - name: 私密漏洞报告
+    url: https://github.com/bobo8886/star-island-time-capsule/security/advisories/new
+    about: 涉及数据泄露或其他安全问题时，请使用私密渠道。

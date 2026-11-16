@@ -4,6 +4,12 @@ const path = require('node:path');
 const root = path.resolve(__dirname, '..');
 const read = name => fs.readFileSync(path.join(root,name),'utf8');
 let html = read('index.html');
+for(const [id,files] of [['island-license',['LICENSE','NOTICE']],['island-notices',['THIRD_PARTY_NOTICES.md']]]){
+  const pattern=new RegExp(`<script id="${id}" type="text/plain">[\\s\\S]*?<\\/script>`);
+  if(!pattern.test(html))throw new Error('Missing embedded notice placeholder: '+id);
+  const notice=files.map(read).join('\n\n').replace(/<\/script/gi,'<\\/script');
+  html=html.replace(pattern,()=>`<script id="${id}" type="text/plain">\n${notice}\n</script>`);
+}
 for(const file of ['style.css','studio.css','tree-letter.css'])html=html.replace(`<link rel="stylesheet" href="${file}">`,()=>'<style>\n'+read(file)+'\n</style>');
 html = html.replace('href="assets/favicon.svg"',()=>`href="data:image/svg+xml;base64,${fs.readFileSync(path.join(root,'assets/favicon.svg')).toString('base64')}"`);
 const assets = {};
