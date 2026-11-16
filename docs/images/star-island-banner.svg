@@ -1,7 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" role="img" aria-labelledby="title desc">
   <title id="title">星屿寻迹 · STAR ISLAND</title>
-  <desc id="desc">星光、浮岛与心形信封组成的原创标识，配以星屿寻迹中文字标。</desc>
-  <rect x="1" y="1" width="1198" height="298" rx="30" fill="#fffaf3" stroke="#e9dfcf" stroke-width="2"/>
+  <desc id="desc">星屿寻迹，给你的时光盲盒。把祝福藏进小岛，让重要的人慢慢找到。</desc>
+  <style>@media (max-width:560px){.subtitle{font-size:56px}.tagline{font-size:50px}}</style>
+  <rect x="1" y="1" width="1198" height="448" rx="30" fill="#fffaf3" stroke="#e9dfcf" stroke-width="2"/>
   <path d="M874 47c96-37 227 33 207 127-12 58-71 85-126 66" fill="none" stroke="#e9dfcf" stroke-width="2" stroke-dasharray="3 10" stroke-linecap="round"/>
   <path d="m1015 76 10 20 20 10-20 10-10 20-10-20-20-10 20-10z" fill="#e3bf80"/>
   <path d="m1065 189 5 10 10 5-10 5-5 10-5-10-10-5 10-5z" fill="#d899ac"/>
@@ -38,4 +39,6 @@
   </g>
   <text x="385" y="153" fill="#17263c" font-family="Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="94" font-weight="700" letter-spacing="8">星屿寻迹</text>
   <text x="392" y="210" fill="#987058" font-family="Trebuchet MS, Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="8">STAR ISLAND</text>
+  <text class="subtitle" x="600" y="344" text-anchor="middle" fill="#17263c" font-family="Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="36" font-weight="700">给你的时光盲盒</text>
+  <text class="tagline" x="600" y="408" text-anchor="middle" fill="#725e50" font-family="Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="30">把祝福藏进小岛，让重要的人慢慢找到。</text>
 </svg>

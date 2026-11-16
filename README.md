@@ -1,10 +1,6 @@
 <div align="center">
 
-<img src="docs/images/star-island-banner.svg" alt="星屿寻迹 · Star Island" width="760">
-
-**给你的时光盲盒**
-
-把祝福藏进小岛，让重要的人慢慢找到。
+<img src="docs/images/star-island-banner.svg" alt="星屿寻迹 · 给你的时光盲盒。把祝福藏进小岛，让重要的人慢慢找到。" width="760">
 
 [![最新版本](https://img.shields.io/github/v/release/bobo8886/star-island?label=release&color=c18c78&logo=github)](https://github.com/bobo8886/star-island/releases/latest) [![核心验证](https://github.com/bobo8886/star-island/actions/workflows/check.yml/badge.svg?branch=main)](https://github.com/bobo8886/star-island/actions/workflows/check.yml) [![非商业使用许可](https://img.shields.io/badge/license-Noncommercial-647f67)](LICENSE)
 
