@@ -2,6 +2,8 @@
 
 [返回首页](../README.md) · [游玩教程](USER_GUIDE.md) · [内容编辑](CUSTOMIZATION.md) · [网页部署](DEPLOYMENT.md)
 
+开发参考：[项目结构](PROJECT_STRUCTURE.md) · [验证指南](TESTING.md)
+
 ## 1. 获取项目
 
 不使用 Git：在仓库点击 **Code → Download ZIP**，解压后打开文件夹。
@@ -34,23 +36,7 @@ npm start
 
 ## 3. 改哪里
 
-| 修改目标 | 文件 |
-| --- | --- |
-| 姓名、生日、故事、照片、语音、长信 | 优先用游戏内礼物工坊，无须改代码 |
-| 默认文案与五枚记忆水晶数据 | `src/content.js` |
-| 可编辑字段、变量、主线 UI 文案与旧存档迁移 | `src/personalization.js` |
-| 区域边界、地图地标、出口、出生点 | `src/regions.js`；主岛碰撞也在 `src/world.js` |
-| 故事物件、分支条件、支线任务 | `src/adventure.js` |
-| 秋千、沙堡、拍照等活动定义 | `src/activities.js`、`src/pastimes.js`、`src/game.js` |
-| 实际人物图集、走路姿势、锚点 | `src/character.js`、`assets/*-walk-*-v6.png` |
-| 跟随、移动、相机、寻路 | `src/world.js` |
-| 河流、落花和地图动态 | `src/scenery.js` |
-| 生日烟花与七秒文字烟花 | `src/fireworks.js` |
-| 游戏界面、布局与工坊 | `index.html`、`style.css`、`studio.css`、`src/studio.js` |
-| 树信页面、自动保存与下载 | `tree-letter.css`、`src/tree-letter.js` |
-| PNG 信纸排版与装饰 | `src/letter-art.js` |
-| 生日结尾长信的 HTML 信笺 | `src/stationery.js` |
-| 存档与音频 | `src/storage.js`、`src/audio.js` |
+修改姓名、生日、故事、照片、语音或长信，优先用游戏内礼物工坊。源码、地图、角色和道具的完整文件索引见 [项目结构](PROJECT_STRUCTURE.md)，按功能展开即可查找。
 
 `星屿寻迹.html` 是自动生成的离线文件。请修改源码后重新构建；直接在这个大文件里改代码，会在下次构建时被覆盖。
 
@@ -118,10 +104,11 @@ macOS / Linux：
 许可与专属礼物导出检查可以直接在离线文件上运行，无须启动服务器：
 
 ```sh
+npm run release:package
 python tests/release-license-v621.py
 ```
 
-它通过实际工坊操作导出新的礼物 HTML，再打开礼物，检查完整许可和来源声明仍在文件中；输出位于 `output/release-v621/`。
+先生成正式下载包，再通过实际工坊操作导出新的礼物 HTML、打开礼物，检查完整许可和来源声明仍在文件中；输出位于 `output/release-v621/`。
 
 ### 树信与界面检查
 
@@ -144,7 +131,7 @@ python tests/tree-letter-flow-v62.py --offline-only
 
 顺序有意义：`festival-flow-v61.py` 通过真实交互生成通关测试备份；树信在线完整测试会读取这个备份，验证通关后写信与生日结尾信相互独立。不要把个人备份作为仓库测试素材上传。
 
-角色、音频、活动和布局的其他脚本见首页验证列表。`animation-v6.py` 与 `gait-world.py` 面向当前全身步态；旧 `side-walk.py` / `gait-contact.py` 是历史局部腿部方案的工具，不应用它们判断当前版本。
+角色、音频、活动和布局的其他脚本按功能整理在 [验证指南](TESTING.md)。其中明确区分当前全身步态检查、历史局部腿部工具，以及需要先生成备份或下载包的流程。
 
 ## 6. 输出目录与验收记录
 
