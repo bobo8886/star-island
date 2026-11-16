@@ -1,0 +1,11 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>月见湖谷 · 通路与场景对齐检查</title>
+<style>body{margin:0;background:#142334;color:#eadfc9;font:15px system-ui}header{padding:12px 22px;display:flex;gap:20px;align-items:center}canvas{display:block;width:100%;max-width:1536px;margin:auto;image-rendering:pixelated}label{cursor:pointer}small{color:#b6c9ce}</style>
+<header><b>月见湖谷</b><label><input id="geo" type="checkbox"> 显示通路 / 碰撞</label><label><input id="points" type="checkbox" checked> 显示交互点</label><small>绿线：可走边界 · 红线：湖水 / 道具 · 青点：新增活动</small></header>
+<canvas id="map" width="1536" height="1024"></canvas>
+<script src="../src/regions.js"></script><script src="../src/adventure.js"></script><script src="../src/activities.js"></script>
+<script>
+const r=ISLAND_REGIONS.find(r=>r.id==='lake'),c=document.getElementById('map'),g=c.getContext('2d'),art=new Image();art.src='moonlake.png';
+function path(points,color){g.strokeStyle=color;g.lineWidth=3;g.beginPath();points.forEach(([x,y],i)=>i?g.lineTo(x,y):g.moveTo(x,y));g.closePath();g.stroke();}
+function redraw(){g.fillStyle='#142334';g.fillRect(0,0,1536,1024);g.drawImage(art,0,0);if(geo.checked){path(r.boundary,'#7bffd6');path(r.river,'#ff7c83');path(r.sceneryWater[0],'#9dceff');for(const o of r.obstacles){g.beginPath();g.ellipse(o.x,o.y,o.rx,o.ry,0,0,Math.PI*2);g.strokeStyle='#ff7c83';g.stroke();}}if(points.checked){for(const p of [{id:'spawn',name:'入口出生点',...r.spawn},...r.landmarks,...ISLAND_ADVENTURE.filter(p=>p.region==='lake'),...ISLAND_ACTIVITIES.filter(p=>p.region==='lake')]){const color=p.type==='activity'?'#aaf5e6':'#ffdb9b';g.fillStyle=color;g.beginPath();g.arc(p.x,p.y,6,0,7);g.fill();g.font='bold 15px system-ui';const width=g.measureText(p.name).width+16;g.fillStyle='#142334e8';g.fillRect(p.x-width/2,p.y+10,width,24);g.fillStyle=color;g.fillText(p.name,p.x-width/2+8,p.y+28);}}window.layoutReady=true;}
+art.onload=redraw;geo.onchange=redraw;points.onchange=redraw;
+</script></html>

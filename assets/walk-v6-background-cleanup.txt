@@ -1,0 +1,8 @@
+=== Final boy-front alpha cutout (built-in imagegen, transparent_background=true) ===
+Reference: assets/companion-walk-front-v6.png
+Output copied unchanged to: assets/companion-walk-front-v6.png
++Generated images are saved to [original generated image] exec-ed4bdffe-185a-4e1c-b299-3c6455c98bd3.png by default.
+If you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.
+The generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.
+
++Remove ALL brown background/matte/glow from this exact 1536x1024 four-column two-row sprite sheet. Output genuine TRANSPARENT RGBA everywhere outside each character. This is a technical cutout/background removal, not a redesign: preserve all eight entire boy drawings exactly, including each distinct leg pose, head, face, chestnut hair, coral scarf, navy jacket, cream trim, trousers, brown boots, camera and satchel. All dark contour pixels that belong to the character stay. The diffuse blurry brown cloud around each character must be fully alpha zero, including the gaps between arms and torso and between legs. No shadows, no ground, no gradients, no opaque or semiopaque colored matte, no background patches. Every sprite isolated on perfect transparency with sharp clean outline; retain the original grid positions, dimensions, scales, and eight poses unchanged.

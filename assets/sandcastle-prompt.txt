@@ -1,0 +1,15 @@
+Tool: built-in OpenAI image_gen
+Reference: assets/coast.png (art direction only)
+Output: assets/sandcastle-stages.png; generated original copied unchanged.
+Mode: transparent RGBA, four-stage production sprite atlas, 2 columns × 2 rows.
+
+Create an ORIGINAL production game sprite atlas for a lovely detailed sandcastle, matching the warm golden beach sand, beautiful crisp small pixel clusters, soft amber light, isometric 2.5D perspective and rich handcrafted materials in the provided island reference. The reference is ART DIRECTION ONLY, do not reproduce the whole island.
+
+Deliver a transparent RGBA sprite sheet, exactly FOUR separate construction stages arranged in a clean 2 columns by 2 rows regular grid on a square canvas. No grid lines, no letters, no numbers, no UI, no labels, no people, no background, no full beach or island. Each cell has generous transparent empty padding, and the same small oval sandy ground patch centered at the same anchor relative to the cell. Objects must never touch cell boundaries. Each cell footprint similar width, castle grows vertically. Consistent camera/light/material/detail/scale across all four cells. Palette: honey-gold sand, cream highlights, warm ochre shadow, dark brown crevices, tiny ivory/blush shells and turquoise water.
+
+TOP LEFT stage 0: an oval patch of disturbed sand, an upturned little turquoise beach bucket, a wooden shovel, a tiny sandy mound, a few pearly shells. No castle yet.
+TOP RIGHT stage 1: on the same footprint a lovingly shaped low castle foundation, rounded compact sand mound with one low ring wall, finger-made grooves and a shallow circular moat, bucket and shovel at the side. Still low without towers.
+BOTTOM LEFT stage 2: a charming medium sandcastle with TWO cylindrical crenellated turrets, a curved wall, a deep arched doorway, five little steps up to the doorway, carefully cut sand-brick details, small shells by the steps. No big flag or central tall tower yet. Rich 3-dimensional volume with bright top/left faces and ochre right shadows.
+BOTTOM RIGHT stage 3: the completed exquisite miniature sandcastle kingdom. THREE beautiful turrets (tall narrow central keep behind two short side towers), fine battlements, carved little window slits, arched doorway, tiny drawbridge over a shallow curved turquoise moat, curved outer wall with scallop-shell details, five sand stairs, ivory and pink shell and coral starfish decorations. A small muted coral pink pennant with a gold star on the central keep. A little warm lantern and tiny spade by the base. Sandcastle feels lovingly built by two people, not stone or a real building. Fine sand grain pixels, sculpted edges, gorgeous crisp gold lighting, cohesive illustrative pixel aesthetic. Do not simplify to boxy rectangles.
+
+All four sprites are complete, independently separated, same isometric view and foot anchor. Transparent background including space between sprites, no glow halo, no white checkerboard baked in. The full atlas is meant to be sliced into four equal quadrants at runtime. Target square 1536x1536 or 1024x1024.

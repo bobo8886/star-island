@@ -1,0 +1,32 @@
+Production method: built-in OpenAI image_gen, reference-conditioned generation, transparent_background=true.
+Female reference: assets/character-design.png. Generated output copied unchanged to assets/character-atlas.png.
+Male reference: assets/companion-design.png. Generated output copied unchanged to assets/companion-atlas.png.
+
+Shared technical direction: landscape transparent RGBA sprite sheet, EXACTLY 4 equal columns and 3 equal rows, 12 full-body isolated sprites, one centered sprite per cell. Identical scale and head size, generous transparent gutters. No text, labels, grid, scenery, floor, cast shadows, glow, gradients, or opaque background. Preserve the reference identity and detailed pixel illustration rendering rather than crude 32-pixel blocks.
+
+Female identity: round cute face, large warm brown eyes with white highlights, chestnut layered fringe and two little braids, peach bow, sage-green cape, gold star clasp, flowing cream dress with seams and folds, caramel crossbody satchel, brown boots, brass lantern.
+Male identity: round cute face, large amber-brown eyes, chestnut short tousled hair with swept fringe, coral knitted scarf, indigo travel coat, brass star and buttons, cream ribbed sweater, chestnut trousers, brown boots, caramel crossbody bag, small vintage camera.
+
+Pose order, left to right, top to bottom:
+row 1: front idle smiling; right-facing walk left boot forward; right-facing walk opposite boot forward; back idle.
+row 2: back walk left boot forward; back walk opposite boot forward; seated on invisible low seat with knees forward; standing gazing upward.
+row 3: front waving; front holding camera at chest with eyes visible; kneeling right-facing using wooden sand shovel; front walking with one boot forward and the other behind.
+
+The runtime performs alpha-bounded atlas extraction, equal world-scale anchoring, nearest-neighbor raster sampling, cached animation frames, directional mirroring and a walk-cycle transition frame. Runtime images retain the source character's detailed face and clothes instead of repainting them as coarse rectangles.
+
+Exact female generation prompt:
+Create a production game character sprite atlas based EXACTLY on the female character in the attached original design. Preserve her identity precisely: round cute face, large warm brown eyes with white highlights, same chestnut layered fringe and two little braids, large peach bow on her left hair, sage-green cape, golden star clasp, flowing cream dress with seams and folds, caramel cross-body satchel, little brown boots, brass lantern. Keep the same refined high-detail pixel illustration rendering, NOT crude 32 pixel blocks. This is the actual artwork that will be displayed in a game instead of a simplified redraw.
+OUTPUT: a landscape transparent RGBA sprite sheet with EXACTLY 4 equal columns and 3 equal rows, 12 full-body sprites, one centered sprite per cell, generous completely transparent margins. All characters must be the SAME scale (standing height about 78% of a cell), same head size and style, feet baseline 88% down each cell. No titles, captions, grid, frames, letters, scenery, cast shadows, glow clouds, gradients or opaque background. Clean silhouette alpha with no colored halo. Do not place characters across cell boundaries.
+Pose order left to right, top to bottom:
+row 1: 1 front standing facing viewer smiling; 2 facing RIGHT walking with left boot forward; 3 facing RIGHT walking with opposite boot forward; 4 back standing looking away.
+row 2: 5 back walking left boot forward; 6 back walking right boot forward; 7 sitting on an invisible low seat, knees forward, boots visible, smiling; 8 standing gazing upward with slight chin lift.
+row 3: 9 front smiling waving right hand; 10 front holding small vintage camera at chest ready to photograph, eyes visible; 11 kneeling facing RIGHT, using a small wooden sand shovel (no sand or ground included); 12 front walking one boot forward and one behind.
+Lantern can rest beside her in seated and kneeling poses, but must stay within that cell. Every pose must look like the SAME beloved character as the reference, with the same detailed warm facial expression and costume. Sharp clean pixel edges, no blur.
+
+Exact male generation prompt:
+Create a production game character sprite atlas based EXACTLY on the male character in the attached original design. Preserve his identity: adorable round face, large warm amber-brown eyes with bright highlights, same chestnut short tousled hair with swept fringe, coral knitted scarf, indigo travel coat with brass star brooch and buttons, cream ribbed sweater, chestnut trousers, brown boots, caramel cross-body bag and small vintage camera. Match the original reference's refined high-detail pixel illustration rendering, not crude low-resolution blocks.
+OUTPUT transparent RGBA sprite sheet, landscape, EXACTLY 4 equal columns and 3 equal rows, 12 full-body isolated sprites one centered sprite per cell. All characters at identical scale, standing height about 78% of a cell, same head size, feet baseline at 88% down cell. Generous transparent gutters. No text, labels, grid, scenery, floor, cast shadows, glow, gradients, or opaque background. Every sprite completely within its cell.
+Pose order row 1: front standing smiling; facing RIGHT walking left boot forward; facing RIGHT walking opposite boot forward; back standing.
+Row 2: back walking left boot forward; back walking right boot forward; sitting on an invisible low bench with knees forward and boots visible; standing gazing upward, gentle smile.
+Row 3: front waving one hand; front holding his little camera at chest ready to photograph with eyes visible; kneeling facing RIGHT using a small wooden sand shovel (no sand or ground); front walking one boot forward and the other behind.
+Same character, costume, face, head proportions and rendering in every cell. His camera rests against bag except photographing. Clean alpha edge without colored halo. Sharp clean detailed pixel edges.

@@ -1,0 +1,342 @@
+{
+  "project": "星屿寻迹：给你的时光盲盒",
+  "artDirection": {
+    "view": "2.5D isometric-inspired floating island",
+    "palette": [
+      "midnight navy",
+      "emerald grass",
+      "coral pink",
+      "turquoise water",
+      "warm amber"
+    ],
+    "rendering": "Canvas 2D, imageSmoothingEnabled=false, CSS image-rendering:pixelated",
+    "target": "Desktop and mobile H5"
+  },
+  "assets": [
+    {
+      "path": "assets/island.png",
+      "role": "Complete environment with hand-aligned navigation and collision overlay",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "RGBA PNG",
+      "alphaVerified": true,
+      "source": "Generated for this project with the built-in OpenAI image_gen tool",
+      "prompt": "assets/generation-prompt.txt",
+      "edits": "Copied original output into workspace; embedded unchanged into standalone HTML",
+      "provenanceMetadata": "Original generated PNG metadata preserved",
+      "review": "Inspected in-game at desktop and mobile scales; no third-party tileset used"
+    },
+    {
+      "path": "assets/forest.png",
+      "role": "Original Windflower Fields region with its own navigation and story props",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "RGBA PNG",
+      "alphaVerified": true,
+      "source": "Generated for this project with the built-in OpenAI image_gen tool",
+      "prompt": "assets/regions-prompts.txt",
+      "edits": "Original generated image embedded unchanged into standalone HTML",
+      "review": "Inspected in desktop and mobile gameplay; region routes tested"
+    },
+    {
+      "path": "assets/coast.png",
+      "role": "Original Tidal Corridor region with its own navigation and story props",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "RGBA PNG",
+      "alphaVerified": true,
+      "source": "Generated for this project with the built-in OpenAI image_gen tool",
+      "prompt": "assets/regions-prompts.txt",
+      "edits": "Original generated image embedded unchanged into standalone HTML",
+      "review": "Inspected in desktop gameplay and offline region travel; region routes tested"
+    },
+    {
+      "path": "assets/character-design.png",
+      "role": "Original four-view concept sheet for Lumi, the playable lantern traveller",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "RGBA PNG",
+      "alphaVerified": true,
+      "source": "Generated for this project with the built-in OpenAI image_gen tool",
+      "prompt": "assets/character-prompt.txt",
+      "implementation": "Reference for assets/character-atlas.png, used directly by src/character.js",
+      "notes": "assets/character-design-notes.md"
+    },
+    {
+      "path": "assets/companion-design.png",
+      "role": "Original four-view design for the optional male travelling companion: chestnut hair, indigo coat, coral scarf and camera",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "RGBA PNG",
+      "source": "Generated for this project with the built-in OpenAI image_gen tool",
+      "prompt": "assets/companion-prompt.txt",
+      "implementation": "src/character.js with variant boy",
+      "review": "Inspected alongside the girl and in actual shared activities; original generated image embedded in standalone"
+    },
+    {
+      "path": "src/character.js",
+      "role": "Shared full-pose atlas renderer for actual world characters and portrait previews",
+      "source": "Authored in this project",
+      "nativeDimensions": [
+        160,
+        192
+      ],
+      "footAnchor": [
+        80,
+        184
+      ],
+      "states": [
+        "idle",
+        "walking",
+        "sitting",
+        "stargazing",
+        "jumping",
+        "waving",
+        "photographing",
+        "building"
+      ],
+      "review": "6.0: 72 grounded gait/idle frames passed load, border and sole-contact checks; all six direction sets contain eight distinct full-body drawings with upper-body motion. 176 pose combinations passed empty-frame, clipping, partial-alpha and matte checks. Both complete frame sheets visually reviewed. See output/animation-v6-report.json and output/gait-world-v6/report.json for independent world review.",
+      "walkCycle": "Eight full painted poses per front/side/back for both characters, plus six directional idle drawings; left mirrors the complete side frame. Contact/down/passing/up/opposite-contact poses replace the previous leg rig. One uniform scale per direction; head axis and opaque sole align the cached whole figure. Phase advances with travelled distance; idle retains facing. Original activity poses remain available.",
+      "partialAlphaPixels": 0,
+      "notes": "assets/character-v4-notes.md",
+      "motionNotes": "assets/walk-v6-notes.md",
+      "motionPrompts": "assets/walk-v6-prompts.txt",
+      "finalTransparencyRevision": "assets/walk-v6-background-cleanup.txt",
+      "rendererSha256": "c26ed34d9b668f58a2e11bce6b346a09eec3cda0143e8b33a1ed89338629ca04"
+    },
+    {
+      "path": "src/world.js",
+      "role": "Original spirit, story props, crystals, fire, water highlights, swing, staged sandcastle, photo props and particles",
+      "source": "Authored in this project",
+      "anchor": "Player feet and ground contact points",
+      "states": [
+        "idle",
+        "walking",
+        "sitting",
+        "stargazing",
+        "jumping"
+      ]
+    },
+    {
+      "path": "src/audio.js",
+      "role": "Original 16-bar A/B cheerful score, regional arrangements and 17 interaction sound families",
+      "source": "Composed and synthesized in this project; no third-party recordings",
+      "notes": "docs/audio-v6.md",
+      "review": "Real WebAudio tests: no clipping, exact mute, independent music/SFX/voice levels, voice ducking and scheduler cleanup. Audition WAVs are provided; no automated subjective listening claim."
+    },
+    {
+      "path": "assets/character-atlas.png",
+      "role": "Twelve transparent poses of the girl, conditioned on her approved original design",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "RGBA PNG",
+      "source": "Generated for this project with the built-in OpenAI image_gen tool",
+      "prompt": "assets/character-atlas-prompts.txt",
+      "edits": "Original PNG preserved; measured atlas regions, alpha threshold and cached frame normalization applied at runtime",
+      "review": "Inspected in actual desktop and phone-simulated game scenes; offline bundle verified"
+    },
+    {
+      "path": "assets/companion-atlas.png",
+      "role": "Twelve transparent poses of the male companion, conditioned on his original design",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "RGBA PNG",
+      "source": "Generated for this project with the built-in OpenAI image_gen tool",
+      "prompt": "assets/character-atlas-prompts.txt",
+      "edits": "Original PNG preserved; measured atlas regions, alpha threshold and cached frame normalization applied at runtime",
+      "review": "Inspected in actual desktop and phone-simulated game scenes; offline bundle verified"
+    },
+    {
+      "path": "assets/sandcastle-stages.png",
+      "role": "Four isometric sandcastle construction stages with towers, stairs, shells and moat",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "format": "RGBA PNG",
+      "source": "Generated for this project with the built-in OpenAI image_gen tool",
+      "prompt": "assets/sandcastle-prompt.txt",
+      "edits": "Original PNG preserved; measured atlas regions, alpha threshold and cached frame normalization applied at runtime",
+      "review": "Inspected in actual desktop and phone-simulated game scenes; offline bundle verified"
+    },
+    {
+      "path": "src/scenery.js",
+      "role": "Original masked water refraction, flow, foam, waterfalls, petals, leaves, butterflies, lights and interaction particles for all four regions",
+      "source": "Authored in this project; samples existing scene water once into cached textures",
+      "notes": "docs/living-scenery-v4.md"
+    },
+    {
+      "path": "src/sandcastle.js",
+      "role": "Anchored four-stage raster model with waving flag, moat highlights and construction particles",
+      "source": "Authored in this project",
+      "notes": "assets/sandcastle-design-notes.md"
+    },
+    {
+      "path": "assets/moonlake.png",
+      "role": "Original Moonlake Valley fourth explorable region with wide walkable loop",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "RGBA PNG",
+      "source": "Generated for this project with built-in OpenAI image_gen",
+      "prompt": "assets/moonlake-prompt.txt",
+      "notes": "assets/moonlake-notes.md",
+      "edits": "Original generated image preserved; navigation and dynamic water aligned in code"
+    },
+    {
+      "path": "assets/lake-props.png",
+      "role": "Cohesive empty/bloom flower beds, windmill tower and separate rotating rotor",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "format": "RGBA PNG",
+      "source": "Generated for this project with built-in OpenAI image_gen",
+      "prompt": "assets/lake-props-prompt.txt",
+      "slicing": "assets/lake-props.json",
+      "edits": "Original generated PNG preserved; crop/alpha normalization cached once by src/pastimes.js"
+    },
+    {
+      "path": "src/pastimes.js",
+      "role": "Eight-activity expansion renderer and simulation: planting, watering, wish boats, stone skipping, windmill",
+      "source": "Authored in this project",
+      "art": "assets/lake-props.png"
+    },
+    {
+      "path": "assets/character-idle-v6.png",
+      "role": "Matching front, side and back idle poses for both characters",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "RGBA PNG",
+      "source": "Reference-conditioned original artwork generated with the built-in OpenAI image_gen tool",
+      "prompt": "assets/walk-v6-prompts.txt",
+      "notes": "assets/walk-v6-notes.md",
+      "edits": "Original selected generated PNG copied into workspace. Slicing, anchor alignment and transparency normalization happen in cached runtime frames.",
+      "frames": 6
+    },
+    {
+      "path": "assets/character-walk-side-v6.png",
+      "role": "Full-body walking poses",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "RGBA PNG",
+      "source": "Reference-conditioned original artwork generated with the built-in OpenAI image_gen tool",
+      "prompt": "assets/walk-v6-prompts.txt",
+      "notes": "assets/walk-v6-notes.md",
+      "edits": "Original selected generated PNG copied into workspace. Slicing, anchor alignment and transparency normalization happen in cached runtime frames.",
+      "frames": 8
+    },
+    {
+      "path": "assets/character-walk-front-v6.png",
+      "role": "Full-body walking poses",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "RGBA PNG",
+      "source": "Reference-conditioned original artwork generated with the built-in OpenAI image_gen tool",
+      "prompt": "assets/walk-v6-prompts.txt",
+      "notes": "assets/walk-v6-notes.md",
+      "edits": "Original selected generated PNG copied into workspace. Slicing, anchor alignment and transparency normalization happen in cached runtime frames.",
+      "frames": 8
+    },
+    {
+      "path": "assets/character-walk-back-v6.png",
+      "role": "Full-body walking poses",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "RGBA PNG",
+      "source": "Reference-conditioned original artwork generated with the built-in OpenAI image_gen tool",
+      "prompt": "assets/walk-v6-prompts.txt",
+      "notes": "assets/walk-v6-notes.md",
+      "edits": "Original selected generated PNG copied into workspace. Slicing, anchor alignment and transparency normalization happen in cached runtime frames.",
+      "frames": 8
+    },
+    {
+      "path": "assets/companion-walk-side-v6.png",
+      "role": "Full-body walking poses",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "RGBA PNG",
+      "source": "Reference-conditioned original artwork generated with the built-in OpenAI image_gen tool",
+      "prompt": "assets/walk-v6-prompts.txt",
+      "notes": "assets/walk-v6-notes.md",
+      "edits": "Original selected generated PNG copied into workspace. Slicing, anchor alignment and transparency normalization happen in cached runtime frames.",
+      "frames": 8
+    },
+    {
+      "path": "assets/companion-walk-front-v6.png",
+      "role": "Full-body walking poses",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "RGBA PNG",
+      "source": "Reference-conditioned original artwork generated with the built-in OpenAI image_gen tool",
+      "prompt": "assets/walk-v6-prompts.txt",
+      "notes": "assets/walk-v6-notes.md",
+      "edits": "Original selected generated PNG copied into workspace. Slicing, anchor alignment and transparency normalization happen in cached runtime frames.",
+      "frames": 8
+    },
+    {
+      "path": "assets/companion-walk-back-v6.png",
+      "role": "Full-body walking poses",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "RGBA PNG",
+      "source": "Reference-conditioned original artwork generated with the built-in OpenAI image_gen tool",
+      "prompt": "assets/walk-v6-prompts.txt",
+      "notes": "assets/walk-v6-notes.md",
+      "edits": "Original selected generated PNG copied into workspace. Slicing, anchor alignment and transparency normalization happen in cached runtime frames.",
+      "frames": 8
+    },
+    {
+      "path": "src/fireworks.js",
+      "role": "Four regional perpetual birthday fireworks, heart/star/flower/lotus silhouettes and seven-second glowing text",
+      "source": "Original Canvas 2D code authored in this project; no external visual or audio assets",
+      "implementation": "Screen-space background effects behind characters, separately composed large text, cached glyph mask and glow sprites, bounded particle lifetime; starts from saved finished flag",
+      "notes": "docs/fireworks-v7.md"
+    },
+    {
+      "path": "src/waypoints.js",
+      "role": "Readable interaction names and stable numbered map signs with click-to-route targets",
+      "source": "Original Canvas 2D interface authored in this project",
+      "implementation": "Fixed screen-size markers, type colors, exit directions, discovered states, actor/HUD/text avoidance, consistent numbering with the complete map list",
+      "notes": "docs/waypoints.md",
+      "review": "output/waypoints/report.json"
+    },
+    {
+      "path": "src/letter-art.js",
+      "role": "Three original printable stationery themes for the independent wishing-tree letter desk",
+      "source": "Original Canvas 2D artwork authored in this project: blossoms, leaves, butterflies, moon, stars, envelope, stamp and wax seal; no external image or font downloads",
+      "implementation": "Local system fonts, measured wrapping, 1080-pixel-wide PNG pages up to 3600 pixels high; exact exported images shown in preview; text and recipient-controlled themes remain editable",
+      "notes": "docs/letter-art-v62.md",
+      "review": "output/letter-art-v62/report.json"
+    }
+  ]
+}

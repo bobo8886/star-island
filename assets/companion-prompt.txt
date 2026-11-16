@@ -1,0 +1,8 @@
+Tool: built-in OpenAI image_gen
+Mode: new original character, existing female concept used as visual family reference
+Reference: assets/character-design.png
+Output: assets/companion-design.png (1536 × 1024 RGBA)
+
+Create an ORIGINAL male companion design sheet for this existing original cozy isometric pixel adventure. The attached image is only the visual-family and proportion reference; preserve its rich clean pixel-art rendering, cute two-and-half-head proportions, warm outline, readable tiny facial features, gentle color harmony. NEW CHARACTER: adult male cozy traveler, warm chestnut short tousled hair with a soft side fringe, big calm amber eyes, subtle peach blush, small kind smile, muted indigo / dusty blue short travel coat with cream knit undershirt, a soft dusty coral scarf that echoes the girl's peach ribbon, dark cocoa trousers and warm brown ankle boots, a tiny brass star pin and tan crossbody satchel. A small vintage camera clipped to his satchel, hands naturally free. He must read as a distinct charming male partner, not the girl with changed colors; no braids or bows. Four clearly separated full-body views horizontally: front standing, three-quarter walking, back standing, seated relaxed looking up. Match the supplied female scale and clean pixel contours. Transparent RGBA background; no background scene, no shadow floor or gradient wash, no text, no borders, no logos. High definition pixel art but real crisp pixel clusters, not blurred painterly art. Entire silhouettes visible with generous margins. Portraits all same consistent design.
+
+Generated original metadata is preserved; source copied unchanged into project. Actual animated sprites are grid-authored in src/character.js, not extracted or warped from this concept image.

@@ -1,0 +1,4 @@
+# Optional: browser regression tests only; playing/building needs no Python.
+playwright==1.60.0
+Pillow==12.2.0
+numpy==2.3.5

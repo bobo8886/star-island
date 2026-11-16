@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0c1425">
+  <meta name="description" content="带上喜欢的旅伴，探索四座星屿，在月见湖谷种花、放纸船，在海边打水漂，把一起度过的日常收藏成照片。">
+  <title>星屿寻迹 · 写一座岛，送给你</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="studio.css">
+  <link rel="stylesheet" href="tree-letter.css">
+</head>
+<body>
+  <canvas id="world" tabindex="0" aria-label="星屿探索地图：方向键或 WASD 移动，Shift 快走，空格跳跃，F 拾取或互动。触碰物件也能发现剧情，使用岛屿地图前往各个区域。"></canvas>
+  <div class="sky-grain" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="星屿寻迹首页"><span class="brand-star" aria-hidden="true">✦</span><span>星屿寻迹<small> A LITTLE ISLAND, ALL FOR YOU</small></span></a>
+    <div class="top-actions">
+      <button id="character-button" class="icon-button" aria-label="角色与旅伴" title="角色与旅伴 · 选择陪你旅行的人" onclick="window.dispatchEvent(new Event('island:character'))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 9a5 5 0 0 1 10 0v3a5 5 0 0 1-10 0V9Zm-3 12v-2c0-2 3-4 8-4s8 2 8 4v2M9 9h1m4 0h1M6 5 4 3m14 2 2-2"/></svg></button>
+      <button id="time-button" class="time-button" title="切换岛屿时光"><span id="time-icon">☾</span><span id="time-label">星夜</span><span class="time-separator"></span><time id="clock">--:--</time></button>
+      <button id="sound-button" class="icon-button" aria-label="开启声音" title="开启声音"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path class="sound-waves" d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/><path class="sound-off" d="m16 9 6 6m0-6-6 6"/></svg></button>
+      <button id="settings-button" class="icon-button" aria-label="设置与布置小岛" title="设置与布置小岛"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m9 3-.5 3-2 1-2.5-1L2 10l2.5 2v2L2 16l2 4 2.5-1 2 1 .5 3h5l.5-3 2-1 2.5 1 2-4-2.5-2v-2L22 10l-2-4-2.5 1-2-1-.5-3Z" transform="translate(1 -1) scale(.92)"/><circle cx="12" cy="12" r="3"/></svg></button>
+    </div>
+  </header>
+
+  <main class="intro-panel" id="intro-panel">
+    <div class="eyebrow"><span></span> 为你封存的，小小宇宙</div>
+    <h1>把时光，<br>藏进<span>星光里。</span></h1>
+    <p class="intro-copy">四座星屿，和喜欢的人一起。<br>沿着落花去看湖，种下明天的小期待。</p>
+    <button id="start-button" class="primary-button">开启这场奇遇 <span>↗</span></button>
+    <button id="open-studio" class="gift-studio-entry" onclick="window.dispatchEvent(new Event('island:studio'))"><span aria-hidden="true">✎</span> 制作一份专属礼物</button>
+    <div class="intro-footnote"><span class="little-star">✧</span> 不必赶路，星光会等你。</div>
+    <div class="chapter-line"><span>PROLOGUE</span><i></i><span>01 / 03</span></div>
+  </main>
+
+  <section class="quest-panel" id="quest-panel" aria-label="当前探索进度">
+    <div class="quest-heading"><span class="eyebrow">星屿手记</span><span id="chapter-badge">序章 · 抵达</span></div>
+    <h2 id="quest-title">有些美好，值得慢慢发现</h2>
+    <p id="quest-description">那些藏在日常里的微光，<br>都在这里，等你拾起。</p>
+    <div id="memory-progress" class="memory-progress" aria-label="已收集 0 枚，共 5 枚"><span>◇</span><span>◇</span><span>◇</span><span>◇</span><span>◇</span><b id="progress-count">0 <i>/ 5</i></b></div>
+    <div class="quest-bottom"><span class="status-dot"></span><span id="save-status">故事从这里开始</span><button id="journal-button">翻开手记 <span>↗</span></button></div>
+  </section>
+
+  <div class="world-label" id="world-label"><span class="tiny-cross">✧</span> 星屿 · 一个只为你存在的地方 <span class="label-line"></span></div>
+  <div class="compass" aria-hidden="true"><span>N</span><svg viewBox="0 0 60 60"><path d="M30 7 36 25 53 30 36 35 30 53 24 35 7 30 24 25Z" fill="none" stroke="currentColor"/><path d="M30 7v46M7 30h46" stroke="currentColor" opacity=".4"/><circle cx="30" cy="30" r="3" fill="currentColor"/></svg></div>
+  <div class="interact-hint" id="interact-hint" hidden><kbd>F</kbd><span></span><button id="interact-inline">拾取 / 互动 ↗</button></div>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  <footer class="bottom-bar">
+    <div class="island-status"><span class="live-dot"></span><span id="ambience-label">风很轻，星星很近</span><small>YOUR LITTLE UNIVERSE</small></div>
+    <div class="keyboard-help"><span><kbd>W A S D</kbd> 移动</span><span><kbd>SHIFT</kbd> 快走</span><span><kbd>SPACE</kbd> 跳跃</span><span><kbd>F</kbd> 拾取</span><span class="click-help">触碰物件发现剧情 · 滚轮缩放</span></div>
+    <div class="bottom-actions">
+      <button id="activities-button" class="map-button daily-button" onclick="window.dispatchEvent(new Event('island:activities'))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m4 20 3-16h10l3 16M5 7h14M9 7v8m6-8v8M8 15h8v2H8z"/></svg><span>一起的小事</span></button>
+      <button id="map-button" class="map-button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m3 5 6-2 6 2 6-2v16l-6 2-6-2-6 2V5Zm6-2v16m6-14v16"/></svg><span>岛屿地图</span><kbd>M</kbd></button>
+    </div>
+  </footer>
+  <div id="touch-controls" class="touch-controls" hidden>
+    <div id="joystick" class="joystick" aria-label="拖动摇杆移动"><span class="joystick-arrows">✥</span><span id="joystick-knob"></span></div>
+    <div class="touch-actions"><button id="run-button" aria-label="按住疾行">»<small>疾行</small></button><button id="jump-button" aria-label="跳跃">↑<small>跳跃</small></button><button id="touch-interact">✦<small>拾取</small></button></div>
+  </div>
+  <dialog id="modal" class="modal"><button id="modal-close" class="modal-close" aria-label="关闭">×</button><div id="modal-content"></div></dialog>
+  <input id="import-file" type="file" accept="application/json,.json" hidden>
+  <noscript>请开启 JavaScript，星屿才能点亮。</noscript>
+  <script src="src/content.js"></script>
+  <script src="src/regions.js"></script>
+  <script src="src/adventure.js"></script>
+  <script src="src/activities.js"></script>
+  <script src="src/personalization.js"></script>
+  <script src="src/storage.js"></script>
+  <script src="src/audio.js"></script>
+  <script src="src/character.js"></script>
+  <script src="src/sandcastle.js"></script>
+  <script src="src/scenery.js"></script>
+<script src="src/pastimes.js"></script>
+  <script src="src/fireworks.js"></script>
+  <script src="src/waypoints.js"></script>
+  <script src="src/world.js"></script>
+  <script src="src/stationery.js"></script>
+  <script src="src/studio.js"></script>
+  <script src="src/letter-art.js"></script>
+  <script src="src/tree-letter.js"></script>
+  <script src="src/game.js"></script>
+</body>
+</html>

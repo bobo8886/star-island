@@ -1,0 +1,14 @@
+{
+  "art": "assets/lake-props.png",
+  "width": 1254,
+  "height": 1254,
+  "cellSize": 627,
+  "frames": {
+    "empty": {"cell": [0,0], "source": [60,190,510,290], "groundAnchor": [252,283]},
+    "bloom": {"cell": [1,0], "source": [687,190,510,290], "groundAnchor": [252,283]},
+    "tower": {"cell": [0,1], "source": [150,642,325,579], "groundAnchor": [164,573], "axle": [164,256]},
+    "rotor": {"cell": [1,1], "source": [690,675,500,510], "pivot": [250,250]}
+  },
+  "absolutePivots": {"tower": [314,898], "rotor": [940,925]},
+  "notes": "Source rectangles include transparent gutters. Empty/bloom share the same anchor and source size. Draw tower and rotor at the same pixel scale. Position rotor pivot at tower axle and rotate only rotor; no perspective scaling is needed. Preserve PNG alpha."
+}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>两位旅人 · 四方向步态检查</title>
+<style>
+  body{background:#172c40;color:#eedfc6;font:15px system-ui;margin:24px}
+  canvas{display:block;image-rendering:pixelated;width:min(100%,1120px);height:auto;border:1px solid #cbb67955}
+  button,select{background:#e6cea2;color:#20313e;border:0;border-radius:5px;padding:12px 18px;font:inherit}
+  .controls{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:18px 0}
+  #status{font-variant-numeric:tabular-nums}
+</style>
+<h1>两位旅人 · 四方向步态</h1>
+<p>横线表示脚底地面。观察髋部、膝盖和靴口是否连续，以及每一拍是否都有一只支撑脚着地。</p>
+<div class="controls">
+  <button id="toggle">暂停动画</button>
+  <button id="step">逐帧前进</button>
+  <button id="rest">切换站立</button>
+  <label>速度 <select id="speed"><option value="1">正常</option><option value="0.25">四分之一慢速</option></select></label>
+  <span id="status" aria-live="polite"></span>
+</div>
+<canvas id="view" width="1120" height="860" aria-label="男女角色四方向行走与接地检查"></canvas>
+<script src="../src/character.js"></script>
+<script>
+  const canvas=document.getElementById('view'),g=canvas.getContext('2d');
+  let playing=true,resting=false,phase=0,last=0;
+  const toggle=document.getElementById('toggle'),rest=document.getElementById('rest');
+  function sync(){toggle.textContent=playing?'暂停动画':'播放动画';rest.textContent=resting?'切换行走':'切换站立';}
+  toggle.onclick=()=>{playing=!playing;sync();};
+  document.getElementById('step').onclick=()=>{playing=false;resting=false;phase=(Math.floor(phase)+1)%8;sync();};
+  rest.onclick=()=>{resting=!resting;sync();};
+  function tick(ms){
+    const dt=last?Math.min((ms-last)/1000,.05):0;last=ms;
+    if(playing&&!resting)phase=(phase+dt*8*Number(document.getElementById('speed').value))%8;
+    g.fillStyle='#22384e';g.fillRect(0,0,canvas.width,canvas.height);
+    const beat=Math.floor(phase);
+    ['girl','boy'].forEach((variant,row)=>['down','right','up','left'].forEach((direction,col)=>{
+      const x=col*280+140,y=row*430+398;
+      g.fillStyle='#e9d8b8';g.font='16px sans-serif';g.fillText((variant==='girl'?'小满':'男性旅伴')+' · '+({down:'向前',right:'向右',up:'向后',left:'向左'})[direction],col*280+72,row*430+30);
+      g.fillStyle='#7ecab980';g.fillRect(col*280+20,y,240,1);
+      IslandCharacter.draw(g,{x,y,direction,walk:resting?0:beat/1.25+.001},{time:ms/1000,pose:resting?'idle':'walk',variant,scale:1.8,phase:'day'});
+    }));
+    document.getElementById('status').textContent=resting?'站立 · 双脚着地':'步态 '+(beat+1)+' / 8';
+    requestAnimationFrame(tick);
+  }
+  IslandCharacter.ready.then(()=>requestAnimationFrame(tick));
+</script>
+</html>

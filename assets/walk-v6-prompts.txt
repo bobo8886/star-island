@@ -1,0 +1,179 @@
+WALK V6 — COMPLETE FULL-POSE SPRITES
+Built-in image_gen only. transparent_background=true for every call.
+Original generated PNGs are preserved in the source directory; selected raw outputs are copied to assets. No raster painting or pose synthesis outside image_gen.
+References: approved assets/character-design.png, companion-design.png; first side figures establish the new animation family, then referenced for remaining directions.
+
+=== Girl side initial ===
+Generated images are saved to [original generated image] exec-e90aeeb7-ccfb-42b8-a4b4-cd6f04ba0aff.png by default.
+If you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.
+The generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.
+
+Use case: identity-preserve. Production game animation sprite sheet, NOT a concept sheet.
+Reference 1 is the approved girl identity and outfit. Reference 2 is the existing raster style. Draw the SAME GIRL in a genuine complete eight-pose walking cycle. Preserve her exact cute face, big brown eyes, chestnut bob with tiny braids, peach bow, sage cape and gold star clasp, cream knee-length dress, brown satchel, small brown boots, and brass lantern. Preserve 2.5-head-tall chibi proportions and crisp detailed pixel-art clusters. No redesign, no new accessories.
+OUTPUT: exactly 8 separate FULL-BODY sprites in a strict 4 columns by 2 rows grid on a 1536 x 1024 truly TRANSPARENT RGBA canvas. Every cell is 384x512. No labels, lines, numbers, scenery, floor, glow haze, or cast shadows. All figures face SCREEN RIGHT in the exact same 3/4-side view as the second figure of reference 1. Keep each entire figure within its own cell with at least 35px padding. Hair/head centered at local x192; full figure around 410px high; a planted shoe sole or toe touches the identical local y475 baseline in EVERY cell. Consistent face/head size, width, color and camera. Deliberate tiny vertical weight shift only (about 6px lower on DOWN and 6px higher on UP).
+The sequence is row-major, left to right:
+0 CONTACT A: NEAR/right leg extended forward to the RIGHT, heel contacts ground; FAR/left leg extends diagonally back to LEFT, toe touches ground. A clearly OPEN SCISSOR stance with a strong readable stride, like the reference walking drawing. Near arm/lantern swings BACK while far arm comes forward.
+1 DOWN A: weight settles onto the near foot now flat forward of hip, near knee flexes slightly; far heel lifted and rear knee starts folding. Torso a little lower. Arms travel toward middle.
+2 PASSING A: near leg is planted VERTICAL under hip; far leg's bent knee and foot swing forward past it, visibly lifted off the ground. Legs overlap under body — a NARROW silhouette, distinctly different from frame0. Hands near body.
+3 UP A: near leg extends backward and pushes through its TOE; far knee is raised FORWARD and the boot reaches forward ready to land. Body a little higher. Near arm moving forward.
+4 CONTACT B: FAR/left leg is now extended forward to RIGHT, heel contacts; NEAR/right leg stretched back to LEFT, toe contacts. Opposite leg must visibly be in front. Near arm and lantern now swing FORWARD. Wide open-scissor stance again.
+5 DOWN B: weight settles onto far flat forward foot; near rear knee bends and lifts; torso lower. This must differ from frame1 in overlapping legs and arm positions.
+6 PASSING B: far leg supports vertically; near knee bends and swings PAST it with lifted boot under the body. Narrow overlap, opposite legs to frame2.
+7 UP B: far leg pushes off behind; near knee raises forward and boot begins extension into frame0. Near arm moving backward. Smooth loop to frame0.
+ANIMATION PRIORITIES: draw complete anatomically CONNECTED hip-thigh-knee-ankle-boot outlines for every pose. These are eight DIFFERENT whole-body drawings, not eight copies of a standing sprite and not tiny boot nudges. Alternating foot contacts, clear extended vs folded legs, opposing arm swings, subtle cape/dress/satchel/lantern follow-through. The skirt follows the knees but never detaches or loses volume. Preserve all facial features and consistent head silhouette across every frame. No running, jumping, both feet airborne, chopped limbs, extra feet, or repeated identical leg poses.
+
+=== Boy side initial ===
+Generated images are saved to [original generated image] exec-be0aa61c-a7eb-4ad6-9b9a-5f478e402367.png by default.
+If you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.
+The generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.
+
+Use case: identity-preserve. Production game animation sprite sheet, NOT a concept sheet.
+Reference 1 is the approved BOY's identity and outfit; reference 2 is the approved new girl walk cycle for companion-scale, pose sequencing and crisp pixel rendering consistency. Draw the SAME BOY from reference1: warm chestnut tousled hair, soft brown eyes, coral scarf, indigo jacket with cream knit cuffs and hem, gold star badge, brown trousers and boots, tan crossbody satchel with little silver camera. Keep his exact round cute face and 2.5-head-tall chibi body proportions. He must match the girl in overall height and pixel-detail density. He carries NO lantern. Preserve outfit and colors.
+OUTPUT: exactly 8 separate FULL-BODY sprites in a strict 4 columns by 2 rows grid on a 1536 x 1024 truly TRANSPARENT RGBA canvas. Every cell is 384x512. No labels, lines, numbers, scenery, floor, glow haze, or cast shadows. All figures face SCREEN RIGHT in the exact same 3/4-side view as the second figure of reference 1. Keep each entire figure within its own cell with at least 35px padding. Hair/head centered at local x192; full figure around 410px high; a planted shoe sole or toe touches the identical local y475 baseline in EVERY cell. Consistent face/head size, width, color and camera. Deliberate tiny vertical weight shift only (about 6px lower on DOWN and 6px higher on UP).
+The sequence is row-major, left to right:
+0 CONTACT A: NEAR/right leg extended forward to the RIGHT, heel contacts ground; FAR/left leg extends diagonally back to LEFT, toe touches ground. A clearly OPEN SCISSOR stance with a strong readable stride, like the reference walking drawing. Near arm swings BACK while far arm comes forward.
+1 DOWN A: weight settles onto the near foot now flat forward of hip, near knee flexes slightly; far heel lifted and rear knee starts folding. Torso a little lower. Arms travel toward middle.
+2 PASSING A: near leg is planted VERTICAL under hip; far leg's bent knee and foot swing forward past it, visibly lifted off the ground. Legs overlap under body — a NARROW silhouette, distinctly different from frame0. Hands near body.
+3 UP A: near leg extends backward and pushes through its TOE; far knee is raised FORWARD and the boot reaches forward ready to land. Body a little higher. Near arm moving forward.
+4 CONTACT B: FAR/left leg is now extended forward to RIGHT, heel contacts; NEAR/right leg stretched back to LEFT, toe contacts. Opposite leg must visibly be in front. Near arm now swing FORWARD. Wide open-scissor stance again.
+5 DOWN B: weight settles onto far flat forward foot; near rear knee bends and lifts; torso lower. This must differ from frame1 in overlapping legs and arm positions.
+6 PASSING B: far leg supports vertically; near knee bends and swings PAST it with lifted boot under the body. Narrow overlap, opposite legs to frame2.
+7 UP B: far leg pushes off behind; near knee raises forward and boot begins extension into frame0. Near arm moving backward. Smooth loop to frame0.
+ANIMATION PRIORITIES: draw complete anatomically CONNECTED hip-thigh-knee-ankle-boot outlines for every pose. These are eight DIFFERENT whole-body drawings, not eight copies of a standing sprite and not tiny boot nudges. Alternating foot contacts, clear extended vs folded legs, opposing arm swings, subtle scarf/jacket/satchel/camera follow-through. The trousers retain their volume; the scarf ends and jacket hem follow the body with a slight delay. Both knees and whole boots remain distinct and connected. Preserve all facial features and consistent head silhouette across every frame. No running, jumping, both feet airborne, chopped limbs, extra feet, or repeated identical leg poses.
+
+=== Girl front initial ===
+Generated images are saved to [original generated image] exec-9981b16c-0f38-4564-a21e-3748a82d7e37.png by default.
+If you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.
+The generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.
+
+Use case: identity-preserve. A production game animation atlas of the SAME approved girl, preserving the exact round face, chestnut bob and small braids, peach bow, sage cape with gold star, cream knee-length dress, tan satchel, brown boots and brass lantern from reference1. Reference2 supplies the approved pixel texture/detail and scale, NOT the facing direction. Consistent 2.5-head chibi proportions and crisp warm pixel outlines. EXACTLY eight complete full-body poses in a strict 4x2 grid, 1536x1024 transparent RGBA, each cell384x512. Figure centered on local x192, approximately410px high, support shoe bottom at local y475. Shared scale and stable head width, small natural weight shift only. No text, grid, floor, shadow, opaque background, scenery, glow haze, extra limbs, or cropped feet. All hips/thighs/knees/boots must form clean continuous anatomical outlines. Real complete drawings with changing arms, torso, knees, skirt/cape and lantern overlap. Draw one full two-step cycle in row-major order: contact A, down A, passing A, up A, opposite contact B, down B, passing B, up B. Alternating leg and opposite arm, at least one foot grounded in every frame. The ending pose leads into the first contact; not eight copies of an idle stance.
+FACING: straight FRONT, walking TOWARD THE VIEWER/down-screen. Both eyes equally visible, shoulders mostly frontal; do NOT use a side-view pose. Reference1's FIRST figure is the face/costume target.
+Frame0 girl's anatomical RIGHT leg (screen LEFT) reaches toward viewer, near sole slightly visible; LEFT leg recedes. Right shoulder/lantern arm swings back, left arm comes forward.
+Frame1 right foot flat supports weight, body settles, left rear knee begins lifting.
+Frame2 right leg vertical planted, left bent knee passes beside it with lifted foot.
+Frame3 right toe pushes behind, left knee/boot raised toward viewer preparing contact.
+Frame4 LEFT leg (screen RIGHT) reaches forward, right leg recedes; left arm back and right lantern arm forward.
+Frame5 left foot flat supports, right knee begins recovery.
+Frame6 left leg vertical planted, right bent knee passes.
+Frame7 left toe pushes behind, right knee/boot reaches forward to frame0.
+CRITICAL IDENTITY: her lantern stays in her anatomical RIGHT hand, which remains on SCREEN LEFT in this front view, in ALL EIGHT frames; her satchel stays on SCREEN RIGHT. Do not swap these hands or accessories. Front/back depth is conveyed by knee height, toe/sole visibility and overlap, not a sideways kick.
+
+=== Girl back ===
+Generated images are saved to [original generated image] exec-5665a28b-5d7a-436d-982a-ea84b5da6915.png by default.
+If you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.
+The generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.
+
+Use case: identity-preserve. A production game animation atlas of the SAME approved girl, preserving the exact round face, chestnut bob and small braids, peach bow, sage cape with gold star, cream knee-length dress, tan satchel, brown boots and brass lantern from reference1. Reference2 supplies the approved pixel texture/detail and scale, NOT the facing direction. Consistent 2.5-head chibi proportions and crisp warm pixel outlines. EXACTLY eight complete full-body poses in a strict 4x2 grid, 1536x1024 transparent RGBA, each cell384x512. Figure centered on local x192, approximately410px high, support shoe bottom at local y475. Shared scale and stable head width, small natural weight shift only. No text, grid, floor, shadow, opaque background, scenery, glow haze, extra limbs, or cropped feet. All hips/thighs/knees/boots must form clean continuous anatomical outlines. Real complete drawings with changing arms, torso, knees, skirt/cape and lantern overlap. Draw one full two-step cycle in row-major order: contact A, down A, passing A, up A, opposite contact B, down B, passing B, up B. Alternating leg and opposite arm, at least one foot grounded in every frame. The ending pose leads into the first contact; not eight copies of an idle stance.
+FACING: true BACK view, walking AWAY from viewer/up-screen. Show the back of the chestnut head and cape, NO eyes/nose/mouth or profile, identical rear head and tiny braids in all poses. Reference1's THIRD figure is the rear costume target. Back-of-hair bow stays on SCREEN RIGHT. Satchel stays SCREEN LEFT, lantern held by anatomical RIGHT hand stays SCREEN RIGHT throughout.
+Frame0 anatomical RIGHT leg (screen RIGHT from this rear view) reaches away/up under the dress, left leg trailing toward viewer with heel raised.
+Frame1 right foot flat under weight, left knee starts recovery, body lowered.
+Frame2 right leg vertical supports, left bent knee and heel pass under the dress.
+Frame3 right toe pushes behind, left knee reaches away preparing next step; torso rises slightly.
+Frame4 LEFT leg reaches away; right leg trails with its heel visible. Arms reverse their swing, but the lantern remains in the RIGHT/screen-right hand.
+Frame5 left supports, right knee starts recovery.
+Frame6 left supports vertically, right bent knee passes.
+Frame7 left toe pushes, right knee reaches forward into frame0.
+Make the alternation of legs and swinging forearms clear in rear silhouette; visible lifted heel and cuff on the recovering boot, not bowlegged side kicks. Only small body bob. No turning the head.
+
+=== Boy front initial ===
+Generated images are saved to [original generated image] exec-2b0d649c-68ad-4fe5-9a09-b2f6c6e89f72.png by default.
+If you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.
+The generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.
+
+Production identity-preserving pixel-art sprite sheet of the SAME cute BOY in reference1 (chestnut tousled hair, big warm brown eyes, coral scarf, indigo jacket, cream cuffs and sweater, gold star badge, brown trousers and boots, tan crossbody satchel and little silver camera). Reference2 shows the approved companion style and body scale. Preserve the face/hair/body proportions and all costume details. EXACTLY 8 complete connected full-body walking poses, 4 columns by2 rows, 1536x1024 transparent RGBA, each cell384x512. Support foot at local y475 in EVERY frame, head centeredx192, same shared character scale around410px high. Tiny purposeful body rise/fall only. No text, floor, shadow, scene, labels, extra feet, cropped edges, or duplicate static poses. Deliberately draw arm swings, scarf trailing and jacket movement as well as bending/straightening legs. This is WALKING, not jogging or jumping: at least one foot contacts the ground. Row-major complete cycle: contact A → down A → passing A → up A → opposite contact B → down B → passing B → up B. Both halves must use opposite legs and opposite arms, not the same pose copied to row2.
+Camera is STRAIGHT FRONT, walking TOWARD viewer, BOTH eyes equally visible. Reference1 FIRST figure is the facing guide. Do not draw side view.
+0: RIGHT leg on SCREEN LEFT reaches forward toward viewer with a little sole visible; LEFT leg recedes. Right arm swings back, LEFT arm comes forward.
+1: right foot flat taking weight, right knee softens, left knee starts recovery.
+2: right foot supports underneath body, LEFT foot lifted behind beside it.
+3: right toe pushes behind, LEFT knee on SCREEN RIGHT raised toward viewer ready for contact.
+4: LEFT leg on SCREEN RIGHT reaches forward, right leg recedes; LEFT arm swings back, RIGHT arm forward — visibly opposite to frame0.
+5: left foot flat taking weight, RIGHT knee recovering.
+6: left foot supports, RIGHT foot lifted beside it.
+7: RIGHT knee on SCREEN LEFT raises toward viewer preparing frame0, LEFT leg supports behind. Frame7 must be the OPPOSITE leg to frame3.
+Satchel and camera stay on SCREEN RIGHT in all eight cells; never migrate with the other arm. Knees advance in depth, not sideways.
+
+=== Boy back ===
+Generated images are saved to [original generated image] exec-f58d1a32-d2d2-43df-9cf6-d5dd321cf568.png by default.
+If you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.
+The generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.
+
+Production identity-preserving pixel-art sprite sheet of the SAME cute BOY in reference1 (chestnut tousled hair, big warm brown eyes, coral scarf, indigo jacket, cream cuffs and sweater, gold star badge, brown trousers and boots, tan crossbody satchel and little silver camera). Reference2 shows the approved companion style and body scale. Preserve the face/hair/body proportions and all costume details. EXACTLY 8 complete connected full-body walking poses, 4 columns by2 rows, 1536x1024 transparent RGBA, each cell384x512. Support foot at local y475 in EVERY frame, head centeredx192, same shared character scale around410px high. Tiny purposeful body rise/fall only. No text, floor, shadow, scene, labels, extra feet, cropped edges, or duplicate static poses. Deliberately draw arm swings, scarf trailing and jacket movement as well as bending/straightening legs. This is WALKING, not jogging or jumping: at least one foot contacts the ground. Row-major complete cycle: contact A → down A → passing A → up A → opposite contact B → down B → passing B → up B. Both halves must use opposite legs and opposite arms, not the same pose copied to row2.
+Camera is TRUE BACK view, walking AWAY/up-screen. Show NO face, eyes, nose or cheek in any frame; all eight show exactly the back of his chestnut hair, scarf and indigo jacket. Reference1 THIRD figure is the facing guide. Satchel and camera remain SCREEN LEFT; coral scarf tail remains screen-right, with slight secondary sway.
+0: RIGHT leg on SCREEN RIGHT advances away; LEFT leg trails toward viewer with heel raised/toe contacting.
+1: RIGHT foot supports under body's right, LEFT knee recovers and heel lifts.
+2: RIGHT foot planted under hip; LEFT foot passes beneath pelvis, bent knee/heel lifted.
+3: RIGHT toe pushes behind; LEFT leg advances away and LEFT heel is not trailing.
+4: LEFT leg on SCREEN LEFT advances away; RIGHT leg trails toward viewer with heel raised. This is opposite to frame0, not a copy. Reverse arm swings.
+5: LEFT foot supports; RIGHT knee recovers.
+6: LEFT foot planted; RIGHT foot passes and lifts.
+7: LEFT toe pushes behind; RIGHT knee advances away into next contact.
+Heel shapes and overlap must make which leg supports clear. Arms, shoulders and scarf counter the stepping hips. Preserve continuous trouser contours and whole boots.
+
+=== Girl side hand continuity edit ===
+Generated images are saved to [original generated image] exec-0d60fb1b-2913-4b79-afb4-efc4138dc20b.png by default.
+If you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.
+The generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.
+
+Edit this 4x2 transparent pixel sprite sheet with one targeted animation correction: the brass lantern must stay in the GIRL'S SAME anatomical RIGHT / viewer-near hand throughout all eight poses. Preserve ALL heads/faces/hair, body proportions, clothing, leg poses, pixel texture, 1536x1024 grid, transparency and full-body framing. Do NOT move or resize the heads.
+The viewer-near arm originates at the shoulder on the LEFT side of the torso drawing. In this right-facing view it swings behind to the left of the body, then in front to the right. The viewer-far arm must ALWAYS be empty.
+Cells row-major:
+0 and1: keep near arm/lantern behind on image-left, far empty arm forward.
+2: the NEAR arm should hang down near the body's CENTER, with its hand holding the lantern directly underneath it at local x190–205. Remove the lantern from the far hand on image-right; that far hand is empty.
+3: redraw the near sleeve/arm swinging FORWARD across the front of the torso and holding the lantern to image-right (local x250). The empty far arm swings behind to image-left. Preserve the lifted forward knee and back toe support.
+4: near arm and its lantern forward to the RIGHT, clearly connected back to the near/left-side shoulder; far arm empty behind to LEFT. Opposite arms to cell0.
+5: near arm and lantern still a little forward/right but moving back toward middle; far empty arm begins forward.
+6: near arm hangs around body center, carries lantern BELOW at local x190–205; far hand forward/right EMPTY. Do not put lantern in the far hand.
+7: near arm and lantern behind/LEFT again, far empty arm forward/RIGHT, ready to loop.
+This is one uninterrupted walking cycle with a lantern in one hand, never passing it between hands. Every frame keeps two connected arms and ONE lantern. No detached handle, extra arm or accessory duplicates. Keep untouched legs, skirts and faces exactly consistent.
+
+=== Boy side opposite-half edit ===
+Generated images are saved to [original generated image] exec-5426de4f-518a-4a16-a037-2bb90fbd206f.png by default.
+If you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.
+The generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.
+
+Edit this exact 4x2 transparent pixel walking sheet. Preserve ALL heads/faces, sizes, grid, outfit, torso proportions, top-row poses, and crisp pixel style. Correct ONLY the BOTTOM ROW (frames4–7) so it is the opposite half-step, not a repeated same-legged hop.
+Viewer-near arm is attached to the visible LEFT-side shoulder in the drawing. Viewer-near trouser leg is slightly brighter; far leg slightly darker, as normal overlap shading (not different clothes).
+BOTTOM LEFT frame4 CONTACT B: near/right leg stretched BACK toward image-LEFT, rear toe down; far/left leg extended FORWARD to image-RIGHT, heel on ground. Near arm swings FORWARD across body to the RIGHT, far arm swings BACK to LEFT. These arm positions must visibly oppose top-left.
+Bottom second frame5 DOWN B: far forward foot flat supports (RIGHT of body), near back leg bends/recovering (LEFT). Near arm still FORWARD, far arm BACK. Body lowers slightly.
+Bottom third frame6 PASSING B: far leg planted vertical under hip; near bent knee moves FORWARD past it, foot lifted. Near arm passes down through middle, far arm coming forward. Keep hands separate.
+Bottom fourth frame7 UP B: far toe pushes off behind on LEFT, near knee/boot reaches forward to RIGHT preparing top-left contact; near arm swings BACK LEFT, far arm FORWARD RIGHT. Boots clearly connected to trousers, one toe planted on same baseline.
+Keep the little camera on the satchel, no extra camera or lantern. Scarf tail may lag subtly but not teleport. No new faces or changed expressions. Keep transparent background.
+
+=== Girl side near-arm edit ===
+Generated images are saved to [original generated image] exec-0baa772c-0b3a-4b5c-b842-eb56b07abc5c.png by default.
+If you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.
+The generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.
+
+Precise edit of this transparent 4x2 animation sheet. Correct ONLY the arms in the BOTTOM-LEFT cell and BOTTOM-SECOND cell (frames4 and5). Preserve ALL other six cells, every head/face, all legs, skirts, body positions, pixel style, scale, and alpha.
+In bottom-left and bottom-second the lantern is mistakenly in the far arm. The near arm must hold it. Use the TOP-RIGHT cell's arm arrangement as the guide: the bright large NEAR sleeve sweeps diagonally ACROSS THE FRONT OF THE CHEST toward SCREEN RIGHT and its hand holds the lantern; the other empty hand trails behind on SCREEN LEFT.
+Bottom-left: the arm on the LEFT SHOULDER of the drawing must clearly cross in front of the chest to the RIGHT (above the satchel), hand around local x265,y285, holding the brass lantern below around local x275,y330. The FAR arm emerges behind and its EMPTY hand is back on image-left aroundx120,y295.
+Bottom-second: the same near arm/lantern comes slightly toward body center, hand around localx240,y300, lantern below; far empty arm remains behind to left.
+Do NOT simply add a lantern to the same far hand. Redraw both connected sleeves/forearms in just these two cells so the near arm crosses the torso. No extra hand or lantern. Keep every face and all other cells identical. Output same 1536x1024 transparent sheet.
+
+=== Both idle ===
+Generated images are saved to [original generated image] exec-e2509113-b342-480d-8069-7288f8ce6597.png by default.
+If you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.
+The generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.
+
+Production identity-preserving PIXEL ART game sprites. Create a neutral IDLE atlas for the two EXACT approved characters shown in the references. Reference1 is girl's new walking artwork, reference2 boy's new walking artwork; reference3/4 lock their original identities/outfits. Same facial identity, proportions, hair silhouette, palette and crisp detailed pixel outlines as the references. This is NOT a redesign.
+Output 1536x1024 transparent RGBA, strict THREE columns by TWO rows, cell size512x512. Exactly SIX complete sprites. Top row GIRL: FRONT / RIGHT-facing 3/4 SIDE / BACK. Bottom row BOY: FRONT / RIGHT-facing 3/4 SIDE / BACK. Each figure centered at localx256, planted feet at localy475, around420px tall. SAME SCALE and head widths as their walking images. Natural relaxed standing with BOTH boots fully grounded and close together, weight balanced, knees straight but soft. No stride, raised foot, jumping, running, or floating; no floor/shadow/text/labels/scenery.
+Girl is the exact chestnut bob girl with two tiny braids, peach bow, large brown eyes, sage cape and gold star, cream dress, tan satchel, brown boots, brass lantern. Lantern always in anatomical RIGHT hand: SCREEN LEFT in front, viewer-near arm in right-side view, SCREEN RIGHT in back. Satchel on opposite side. On side view the lantern hand hangs naturally near hip, not stretched forward or back; consistent quiet smile looking screen-right. Back shows NO face.
+Boy is exact chestnut tousled-haired boy with warm brown eyes, coral scarf, indigo jacket/cream cuffs and hem, gold star, brown trousers and boots, tan satchel with silver camera. Hands relaxed at sides, same cute calm face and body proportions. In back view NO face, bag screen-left. Scarf tail hangs naturally.
+Keep original whole-body connected anatomy. Do not add white rectangles, halos or any marks in transparent gutters.
+
+=== Girl front opposite knee edit ===
+Generated images are saved to [original generated image] exec-bbbce496-e3af-4e7a-80d6-81103d1fbbb3.png by default.
+If you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.
+The generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.
+
+Correct ONE pose only in this exact 1536x1024 transparent 4x2 girl FRONT walking sheet. Preserve every head/face/outfit/accessory and all other SEVEN cells exactly. Edit ONLY the BOTTOM-RIGHT cell (frame7). It should be the opposite leg to the TOP-RIGHT pose.
+Bottom-right: the knee on SCREEN LEFT (girl's anatomical RIGHT) is raised FORWARD toward viewer, and its boot is ahead with a little sole showing. The SCREEN RIGHT leg (girl's anatomical LEFT) is planted BEHIND supporting weight, sole/toe touching the existing ground baseline. Thus top-right has screen-right knee forward, bottom-right must have screen-left knee forward. Keep continuous hips/knees/boots and natural skirt folds. Never swap the arms: lantern remains SCREEN LEFT and satchel SCREEN RIGHT. Same face/head scale and pixel texture. Keep transparent output, no extra limbs/white rectangles.
+
+=== Boy front opposite knee edit ===
+Generated images are saved to [original generated image] exec-75846e72-3781-4805-a5b0-7fa736ccbf87.png by default.
+If you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.
+The generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.
+
+Correct ONE pose only in this exact 1536x1024 transparent 4x2 boy FRONT walking sheet. Preserve every head/face/outfit/accessory and all other SEVEN cells exactly. Edit ONLY the TOP-RIGHT cell (frame3). It should be opposite leg to bottom-right.
+Top-right: knee on SCREEN RIGHT (boy's anatomical LEFT) is raised FORWARD toward viewer, with the SCREEN RIGHT boot reaching forward and a little sole visible. The SCREEN LEFT leg is planted behind supporting weight. This must visibly differ from bottom-right, whose raised knee stays SCREEN LEFT. Change trousers/boots of this single cell only; preserve camera bag on SCREEN RIGHT, all arms and face/torso positions, style/scale. One support foot must remain on the original baseline. No extra feet or floating, no white marks in transparent gutters.
+

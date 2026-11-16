@@ -1,0 +1,20 @@
+/* Migration and consistency checks for the four additional repeatable activities. */
+const assert=require('node:assert/strict');
+global.window=global;global.matchMedia=()=>({matches:false});
+require('../src/content.js');require('../src/regions.js');require('../src/adventure.js');require('../src/activities.js');require('../src/storage.js');
+const empty={sandcastle:0,completed:[],photos:0,gardenStage:0,boats:0,lastBoatWish:'',bestSkips:0,stoneThrows:0,windmillTurns:0};
+const migrated=IslandStore.normalize({version:1,collected:['first'],activities:{sandcastle:3,completed:['sandcastle'],photos:2}});
+assert.deepEqual(migrated.activities,{...empty,sandcastle:3,completed:['sandcastle'],photos:2});
+assert.equal(migrated.settings.companion,'spirit');
+const invalid=IslandStore.normalize({region:'unknown',activities:{gardenStage:-3,boats:Infinity,lastBoatWish:'<bad>',bestSkips:1,stoneThrows:-2,windmillTurns:NaN,completed:['flower_garden','paper_boat','stone_skip','windmill','unknown']}});
+assert.deepEqual(invalid.activities,empty);assert.equal(invalid.region,'home');
+const ids=['flower_garden','paper_boat','stone_skip','windmill'];
+const valid=IslandStore.normalize({region:'lake',visitedRegions:['forest','lake','unknown'],activities:{gardenStage:2,boats:2,lastBoatWish:'together',bestSkips:5,stoneThrows:4,windmillTurns:6,completed:ids}});
+assert.deepEqual(valid.activities,{...empty,gardenStage:2,boats:2,lastBoatWish:'together',bestSkips:5,stoneThrows:4,windmillTurns:6,completed:ids});
+assert.equal(valid.region,'lake');assert.deepEqual(valid.visitedRegions,['home','forest','lake']);
+const roundtrip=IslandStore.normalize(JSON.parse(JSON.stringify(valid)));
+assert.deepEqual(roundtrip,valid);
+ISLAND_CONTENT.defaultCompanion='boy';
+assert.deepEqual(IslandStore.normalize({}).activities,empty);
+assert.equal(IslandStore.normalize({}).settings.companion,'boy');
+console.log(JSON.stringify({oldSaveMigration:true,malformedActivitiesRejected:true,lakeRegionRetained:true,backupRoundtrip:true,freshGiftActivities:true,activityCount:ISLAND_ACTIVITIES.length}));
