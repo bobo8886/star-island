@@ -12,7 +12,7 @@
 
 [![在线试玩](https://img.shields.io/badge/▶_在线试玩-527a68?style=for-the-badge)](https://bobo8886.github.io/star-island/) [![下载游戏](https://img.shields.io/badge/↓_下载游戏-9b674d?style=for-the-badge)](https://github.com/bobo8886/star-island/releases/latest) [![制作礼物](https://img.shields.io/badge/♡_制作礼物-a56a80?style=for-the-badge)](docs/CUSTOMIZATION.md)
 
-[游玩教程](docs/USER_GUIDE.md) · [部署分享](docs/DEPLOYMENT.md) · [开发文档](docs/DEVELOPMENT.md) · [更新日志](CHANGELOG.md) · [问题反馈](https://github.com/bobo8886/star-island/issues/new/choose)
+[游玩教程](docs/USER_GUIDE.md) · [部署分享](docs/DEPLOYMENT.md) · [更新日志](CHANGELOG.md) · [问题反馈](https://github.com/bobo8886/star-island/issues/new/choose)
 
 </div>
 
