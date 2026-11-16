@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">星屿寻迹 · 星屿信笺标识</title>
+  <desc id="desc">深蓝夜色里，一颗桃金星星照亮浮岛上的心形信封。</desc>
+  <rect x="4" y="4" width="248" height="248" rx="52" fill="#111c2f"/>
+  <rect x="13" y="13" width="230" height="230" rx="44" fill="none" stroke="#edd1a1" stroke-opacity=".18" stroke-width="2"/>
+  <g fill="#edd1a1">
+    <circle cx="55" cy="111" r="3"/>
+    <circle cx="198" cy="48" r="3"/>
+    <path d="m47 59 5 10 10 5-10 5-5 10-5-10-10-5 10-5z"/>
+  </g>
+  <path d="m207 97 4 8 8 4-8 4-4 8-4-8-8-4 8-4z" fill="#ed9cbd"/>
+  <path d="m128 21 15 33 33 16-33 16-15 33-15-33-33-16 33-16z" fill="#edd1a1"/>
+  <path d="m128 46 8 16 16 8-16 8-8 16-8-16-16-8 16-8z" fill="#ed9cbd"/>
+  <path d="m38 157 35 45 44 30q11 7 22 0l49-30 30-45-78 35q-12 6-24 0z" fill="#bc9077"/>
+  <path d="m116 192 1 40q11 7 22 0l49-30 30-45-78 35q-12 6-24 0z" fill="#926e61"/>
+  <path d="m38 157 39 18 16 38-20-11z" fill="#d5aa89"/>
+  <path d="m176 176-12 39 24-13 30-45z" fill="#765b57"/>
+  <path d="m38 157 78-35q12-6 24 0l78 35-78 35q-12 6-24 0z" fill="#8a9d78"/>
+  <path d="m38 157 78-35q12-6 24 0l78 35-16 7-62-28q-12-6-24 0l-62 28z" fill="#b4c49a"/>
+  <path d="m61 167 55 25q12 6 24 0l55-25" fill="none" stroke="#5e775c" stroke-width="5" stroke-linecap="round"/>
+  <path d="m61 153 9-7m119 13 8-5m-20 22 9-5" fill="none" stroke="#c5d3a8" stroke-width="4" stroke-linecap="round"/>
+  <g transform="rotate(-7 130 139)">
+    <rect x="79" y="105" width="104" height="70" rx="8" fill="#fff4df" stroke="#715a59" stroke-width="4"/>
+    <path d="m83 169 35-29m61 29-34-29" fill="none" stroke="#d8b99c" stroke-width="3" stroke-linecap="round"/>
+    <path d="m82 110 43 32q6 5 12 0l43-32" fill="#f2dfc6" stroke="#ba917a" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M131 140c-9-11-23 2-13 12l13 11 13-11c10-10-4-23-13-12z" fill="#d989a1"/>
+    <path d="m123 146 2-2" stroke="#ffe5e8" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <path d="m128 209 6 7-6 11-6-11z" fill="#edd1a1"/>
+</svg>

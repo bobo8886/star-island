@@ -1,6 +1,6 @@
 # 素材来源与第三方说明
 
-《星屿寻迹：给你的时光盲盒》由 [bobo8886](https://github.com/bobo8886/star-island-time-capsule) 维护。项目自有内容采用 [《星屿寻迹非商业使用许可协议 1.0》](LICENSE)：允许个人游玩、修改、免费赠礼和非商业分享，禁止未经另行书面许可的商用、转卖和收费交付。具体范围以 `LICENSE` 全文为准。
+《星屿寻迹：给你的时光盲盒》由 [bobo8886](https://github.com/bobo8886/star-island) 维护。项目自有内容采用 [《星屿寻迹非商业使用许可协议 1.0》](LICENSE)：允许个人游玩、修改、免费赠礼和非商业分享，禁止未经另行书面许可的商用、转卖和收费交付。具体范围以 `LICENSE` 全文为准。
 
 本文件记录素材与工具的来源，不会把第三方内容改为项目的自定义许可，也不代表维护者拥有第三方的权利。
 
@@ -19,7 +19,7 @@
 
 ## 游戏美术来源
 
-主要来源记录保存在 [`assets/manifest.json`](https://github.com/bobo8886/star-island-time-capsule/blob/main/assets/manifest.json)。以下图片由本项目使用 OpenAI 内置 `image_gen` 工具生成，部分角色图片以本项目已有角色设计为参考，再进行透明背景整理、帧对齐及游戏接入。
+主要来源记录保存在 [`assets/manifest.json`](https://github.com/bobo8886/star-island/blob/main/assets/manifest.json)。以下图片由本项目使用 OpenAI 内置 `image_gen` 工具生成，部分角色图片以本项目已有角色设计为参考，再进行透明背景整理、帧对齐及游戏接入。
 
 | 素材组 | 文件与用途 |
 | --- | --- |
@@ -30,24 +30,26 @@
 
 当前单文件构建使用上述 17 张 PNG。仓库内还保留了生成提示词、设计参考和制作记录，便于理解素材来源；它们不一定都进入运行包。主要记录包括：
 
-- [地图与区域提示词](https://github.com/bobo8886/star-island-time-capsule/blob/main/assets/regions-prompts.txt)、[月光湖提示词](https://github.com/bobo8886/star-island-time-capsule/blob/main/assets/moonlake-prompt.txt)。
-- [女主角设计](https://github.com/bobo8886/star-island-time-capsule/blob/main/assets/character-prompt.txt)、[男同行角色设计](https://github.com/bobo8886/star-island-time-capsule/blob/main/assets/companion-prompt.txt)、[角色图集说明](https://github.com/bobo8886/star-island-time-capsule/blob/main/assets/character-atlas-prompts.txt)。
-- [步行动作提示词](https://github.com/bobo8886/star-island-time-capsule/blob/main/assets/walk-v6-prompts.txt)、[动作制作记录](https://github.com/bobo8886/star-island-time-capsule/blob/main/assets/walk-v6-notes.md)。
-- [沙堡提示词](https://github.com/bobo8886/star-island-time-capsule/blob/main/assets/sandcastle-prompt.txt)、[湖区道具提示词](https://github.com/bobo8886/star-island-time-capsule/blob/main/assets/lake-props-prompt.txt)。
+- [地图与区域提示词](https://github.com/bobo8886/star-island/blob/main/assets/regions-prompts.txt)、[月光湖提示词](https://github.com/bobo8886/star-island/blob/main/assets/moonlake-prompt.txt)。
+- [女主角设计](https://github.com/bobo8886/star-island/blob/main/assets/character-prompt.txt)、[男同行角色设计](https://github.com/bobo8886/star-island/blob/main/assets/companion-prompt.txt)、[角色图集说明](https://github.com/bobo8886/star-island/blob/main/assets/character-atlas-prompts.txt)。
+- [步行动作提示词](https://github.com/bobo8886/star-island/blob/main/assets/walk-v6-prompts.txt)、[动作制作记录](https://github.com/bobo8886/star-island/blob/main/assets/walk-v6-notes.md)。
+- [沙堡提示词](https://github.com/bobo8886/star-island/blob/main/assets/sandcastle-prompt.txt)、[湖区道具提示词](https://github.com/bobo8886/star-island/blob/main/assets/lake-props-prompt.txt)。
 
 当前素材清单没有列入从其他游戏提取的图片或外购、转载的像素素材包。《星露谷物语》等作品只作为类型和体验讨论中的参考，不是本项目素材来源，也不表示相关权利人参与、授权或背书。
 
-水面、落叶、烟花、地标提示等效果由项目的 Canvas 代码绘制或对自带场景图进行处理。信纸中的花瓣、叶片、蝴蝶、月亮、星星、信封、邮票与火漆装饰由 [`src/letter-art.js`](https://github.com/bobo8886/star-island-time-capsule/blob/main/src/letter-art.js) 绘制；烟花由 [`src/fireworks.js`](https://github.com/bobo8886/star-island-time-capsule/blob/main/src/fireworks.js) 绘制，没有为这些效果另行打包第三方贴图。
+水面、落叶、烟花、地标提示等效果由项目的 Canvas 代码绘制或对自带场景图进行处理。信纸中的花瓣、叶片、蝴蝶、月亮、星星、信封、邮票与火漆装饰由 [`src/letter-art.js`](https://github.com/bobo8886/star-island/blob/main/src/letter-art.js) 绘制；烟花由 [`src/fireworks.js`](https://github.com/bobo8886/star-island/blob/main/src/fireworks.js) 绘制，没有为这些效果另行打包第三方贴图。
 
 ## 音乐、音效与字体
 
-背景曲《口袋里的晴天》（代码中称为 *Pocketful of Sunlight*）以及交互音效由 [`src/audio.js`](https://github.com/bobo8886/star-island-time-capsule/blob/main/src/audio.js) 使用 Web Audio 合成。乐句、音色与音量路由的记录见 [`docs/audio-v6.md`](https://github.com/bobo8886/star-island-time-capsule/blob/main/docs/audio-v6.md)。玩家上传的语音是玩家自己的内容，应与项目合成音效分别看待。
+仓库首页的 `docs/images/star-island-banner.svg` 和 `docs/images/star-island-mark.svg` 是本项目编写的矢量标识，沿用项目原有星形与配色，没有采用参考仓库的 Logo。它们适用项目许可，仅用于文档展示，不计入上述 17 张游戏运行 PNG。标识不附带字体文件，文字采用设备可用字体显示。
+
+背景曲《口袋里的晴天》（代码中称为 *Pocketful of Sunlight*）以及交互音效由 [`src/audio.js`](https://github.com/bobo8886/star-island/blob/main/src/audio.js) 使用 Web Audio 合成。乐句、音色与音量路由的记录见 [`docs/audio-v6.md`](https://github.com/bobo8886/star-island/blob/main/docs/audio-v6.md)。玩家上传的语音是玩家自己的内容，应与项目合成音效分别看待。
 
 样式与信纸代码引用 Microsoft YaHei、PingFang SC、Noto Serif CJK SC、Source Han Serif SC、SimSun、KaiTi 等本机字体名称，并提供系统字体回退。CSS 中的 `local()` 仅尝试使用设备已安装字体；项目没有附带这些字体文件，也没有授予它们的再分发权。不同设备实际显示的字体和表情符号可能不同。
 
 ## 开发与测试依赖
 
-游戏运行使用浏览器原生 API，没有 npm 运行时依赖。以下 Python 包由 [`requirements-dev.txt`](https://github.com/bobo8886/star-island-time-capsule/blob/main/requirements-dev.txt) 固定版本，用于开发自检；它们不打包进 H5 单文件或个人礼物 HTML。
+游戏运行使用浏览器原生 API，没有 npm 运行时依赖。以下 Python 包由 [`requirements-dev.txt`](https://github.com/bobo8886/star-island/blob/main/requirements-dev.txt) 固定版本，用于开发自检；它们不打包进 H5 单文件或个人礼物 HTML。
 
 | 工具 | 固定版本 | 本项目用途 | 对应版本的上游许可 |
 | --- | --- | --- | --- |
@@ -61,4 +63,4 @@ Node.js、Python 解释器、浏览器及 Playwright 下载的浏览器组件均
 
 贡献新的图片、字体、音乐或其他素材时，请同时说明作者、原始来源、准确版本及许可，并确认允许按本项目的实际方式使用和分发。不要仅凭“网上可下载”或“免费”认定已获得使用权。
 
-如发现来源记录有误、遗漏署名或存在权利问题，可通过 [仓库 Issues](https://github.com/bobo8886/star-island-time-capsule/issues) 联系维护者，并提供具体文件和可核实的来源。请勿在公开 Issue 中上传私人照片、语音或完整礼物文件。
+如发现来源记录有误、遗漏署名或存在权利问题，可通过 [仓库 Issues](https://github.com/bobo8886/star-island/issues) 联系维护者，并提供具体文件和可核实的来源。请勿在公开 Issue 中上传私人照片、语音或完整礼物文件。

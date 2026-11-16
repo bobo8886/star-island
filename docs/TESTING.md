@@ -16,6 +16,8 @@ npm run check:bundle
 
 `npm test` 包含八组核心检查：主岛路线、跨区路线、湖谷活动路线、活动存档、个性化内容、树信存档、路标布局与移动时间步，无须安装浏览器。构建和一致性检查会核对离线包中的源码、样式、图片和完整许可。
 
+向 `main` 推送或提交 Pull Request 时，[GitHub Actions](https://github.com/bobo8886/star-island/actions/workflows/check.yml) 会自动运行上述检查，并确认提交的离线文件与重新构建的结果一致。首页的 Core checks 徽章展示实际结果；浏览器与视觉回归仍需按下方指南单独运行。
+
 纯文档修改检查链接、示例和排版即可。代码或美术改动还应实际体验受影响的功能；数值通过不代替角色动作与画面的目测。
 
 ## 浏览器检查准备
@@ -148,7 +150,7 @@ npm run release:package
 python tests/release-license-v621.py
 ```
 
-先生成 `output/releases/v6.2.1/` 中的发布文件，再测试实际工坊导出和再次转赠。检查包含完整许可保留、ZIP 内容与 SHA-256、收礼人全新进度、私人树信不随游戏导出，以及离线脚本错误和网络请求。该流程无须本地服务器；输出位于 `output/release-v621/`。
+先生成 `output/releases/v6.2.2/` 中的发布文件，再测试实际工坊导出和再次转赠。检查包含完整许可保留、ZIP 内容与 SHA-256、收礼人全新进度、私人树信不随游戏导出，以及离线脚本错误和网络请求。该流程无须本地服务器；输出位于 `output/release-v621/`。
 
 </details>
 

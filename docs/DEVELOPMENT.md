@@ -11,8 +11,8 @@
 使用 Git：
 
 ```sh
-git clone https://github.com/bobo8886/star-island-time-capsule.git
-cd star-island-time-capsule
+git clone https://github.com/bobo8886/star-island.git
+cd star-island
 ```
 
 直接玩离线文件不需要 Node.js。开发、打包和核心测试需要 Node.js，建议安装仍受支持的 LTS 版本。项目没有 npm 运行时依赖，因此无须先执行 `npm install`。
@@ -64,10 +64,10 @@ npm run check:bundle
 npm run release:package
 ```
 
-此命令只用 Python 标准库，不需要安装浏览器测试依赖。它会重新构建、检查单文件一致性，再生成 `output/releases/v6.2.1/`（版本号来自 `package.json`）：
+此命令只用 Python 标准库，不需要安装浏览器测试依赖。它会重新构建、检查单文件一致性，再生成 `output/releases/v6.2.2/`（版本号来自 `package.json`）：
 
-- `star-island-v6.2.1.html`：可以直接打开的离线游戏，内嵌完整许可与来源声明。
-- `star-island-v6.2.1-offline.zip`：包含游戏、`LICENSE`、`NOTICE`、`THIRD_PARTY_NOTICES.md` 和玩家说明 `START_HERE.md`。
+- `star-island-v6.2.2.html`：可以直接打开的离线游戏，内嵌完整许可与来源声明。
+- `star-island-v6.2.2-offline.zip`：包含游戏、`LICENSE`、`NOTICE`、`THIRD_PARTY_NOTICES.md` 和玩家说明 `START_HERE.md`。
 - `SHA256SUMS.txt`：上述两个下载文件的 SHA-256 校验和。
 - `build-report.json`：供本地检查的生成记录，无须作为玩家下载附件。
 

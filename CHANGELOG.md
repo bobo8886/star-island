@@ -1,6 +1,13 @@
 # 更新日志
 
-这里记录《星屿寻迹：给你的时光盲盒》的功能与分发变化。6.0、6.1、6.2.0 的条目根据 [`VERIFICATION.md`](VERIFICATION.md) 中的开发与验收记录整理；版本条目不表示这些历史阶段都曾建立独立的 GitHub 标签或 Release。可下载版本以 [GitHub Releases](https://github.com/bobo8886/star-island-time-capsule/releases) 为准。
+这里记录《星屿寻迹：给你的时光盲盒》的功能与分发变化。6.0、6.1、6.2.0 的条目根据 [`VERIFICATION.md`](VERIFICATION.md) 中的开发与验收记录整理；版本条目不表示这些历史阶段都曾建立独立的 GitHub 标签或 Release。可下载版本以 [GitHub Releases](https://github.com/bobo8886/star-island/releases) 为准。
+
+## 6.2.2 · 2026-11-16
+
+- 仓库名称简化为 `star-island`，同步更新试玩、教程、反馈、素材声明和下载入口。
+- README 增加原创星屿矢量标识、带图标的入口和动态版本 / Star / 验证状态徽章；保留精简的结构与验证入口。
+- 增加 GitHub Actions 核心检查，自动验证逻辑、单文件构建和生成文件一致性。
+- 重新打包离线游戏，让内嵌许可与来源说明指向新仓库；玩法和存档格式保持不变。
 
 ## 6.2.1 · 2026-11-16
 

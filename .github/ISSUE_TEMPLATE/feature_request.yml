@@ -6,7 +6,7 @@ body:
     attributes:
       value: |
         欢迎描述你想改善的体验。请先搜索是否已有相似建议；不必附带代码或设计图。
-        项目允许非商业使用、修改和免费分享，建议也应与 [项目许可](https://github.com/bobo8886/star-island-time-capsule/blob/main/LICENSE) 的范围一致。
+        项目允许非商业使用、修改和免费分享，建议也应与 [项目许可](https://github.com/bobo8886/star-island/blob/main/LICENSE) 的范围一致。
   - type: textarea
     id: situation
     attributes:

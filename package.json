@@ -1,6 +1,6 @@
 {
-  "name": "star-island-time-capsule",
-  "version": "6.2.1",
+  "name": "star-island",
+  "version": "6.2.2",
   "license": "SEE LICENSE IN LICENSE",
   "private": true,
   "description": "星屿寻迹：给你的时光盲盒 — a playable offline-first H5 birthday adventure",

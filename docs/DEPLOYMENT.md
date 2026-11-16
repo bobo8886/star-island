@@ -4,7 +4,9 @@
 
 本项目是静态 H5 游戏。运行游戏不需要账号、数据库或后端服务。公开示例地址是：
 
-**https://bobo8886.github.io/star-island-time-capsule/**
+**https://bobo8886.github.io/star-island/**
+
+仓库更名后，请使用上面的新试玩地址并更新收藏。GitHub 的仓库链接会转向新仓库，但旧的项目 Pages 网址不会自动重定向。
 
 ## 1. 先分清你要分享什么
 

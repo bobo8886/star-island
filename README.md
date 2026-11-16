@@ -1,14 +1,18 @@
 <div align="center">
 
-# 星屿寻迹
+<img src="docs/images/star-island-banner.svg" alt="星屿寻迹 · Star Island" width="760">
 
 **给你的时光盲盒**
 
 把祝福藏进小岛，让重要的人慢慢找到。
 
-[![版本 6.2.1](https://img.shields.io/badge/version-6.2.1-c18c78)](https://github.com/bobo8886/star-island-time-capsule/releases/latest) [![非商业使用许可](https://img.shields.io/badge/license-Noncommercial-647f67)](LICENSE) [![GitHub stars](https://img.shields.io/github/stars/bobo8886/star-island-time-capsule?style=flat)](https://github.com/bobo8886/star-island-time-capsule/stargazers)
+[![最新版本](https://img.shields.io/github/v/release/bobo8886/star-island?label=release&color=c18c78&logo=github)](https://github.com/bobo8886/star-island/releases/latest) [![核心验证](https://github.com/bobo8886/star-island/actions/workflows/check.yml/badge.svg?branch=main)](https://github.com/bobo8886/star-island/actions/workflows/check.yml) [![非商业使用许可](https://img.shields.io/badge/license-Noncommercial-647f67)](LICENSE)
 
-**[在线试玩](https://bobo8886.github.io/star-island-time-capsule/) · [下载游戏](https://github.com/bobo8886/star-island-time-capsule/releases/latest) · [制作专属礼物](docs/CUSTOMIZATION.md) · [更新日志](CHANGELOG.md)**
+[![HTML5 Canvas](https://img.shields.io/badge/HTML5-Canvas-c8874d?logo=html5&logoColor=white)](docs/DEVELOPMENT.md) [![支持离线游玩](https://img.shields.io/badge/play-offline-688b91)](docs/USER_GUIDE.md) [![GitHub stars](https://img.shields.io/github/stars/bobo8886/star-island?style=flat&logo=github&color=d3a758)](https://github.com/bobo8886/star-island/stargazers)
+
+[![在线试玩](https://img.shields.io/badge/▶_在线试玩-527a68?style=for-the-badge)](https://bobo8886.github.io/star-island/) [![下载游戏](https://img.shields.io/badge/↓_下载游戏-9b674d?style=for-the-badge)](https://github.com/bobo8886/star-island/releases/latest) [![制作礼物](https://img.shields.io/badge/♡_制作礼物-a56a80?style=for-the-badge)](docs/CUSTOMIZATION.md)
+
+[游玩教程](docs/USER_GUIDE.md) · [部署分享](docs/DEPLOYMENT.md) · [开发文档](docs/DEVELOPMENT.md) · [更新日志](CHANGELOG.md) · [问题反馈](https://github.com/bobo8886/star-island/issues/new/choose)
 
 </div>
 
@@ -18,15 +22,15 @@
 
 ![星屿实景：自由探索、记忆水晶与许愿树](docs/images/island-exploration.png)
 
-## 开始游玩
+## 🎮 开始游玩
 
-- **直接体验**：打开 [在线试玩](https://bobo8886.github.io/star-island-time-capsule/)，电脑和手机均可用浏览器进入。
-- **离线游玩**：在 [正式版下载](https://github.com/bobo8886/star-island-time-capsule/releases/latest) 获取 `star-island-v6.2.1-offline.zip`，解压后打开 `星屿寻迹.html`；也可直接下载单个 HTML。
-- **修改源码**：下载 [完整项目](https://github.com/bobo8886/star-island-time-capsule/archive/refs/heads/main.zip)，按 [开发教程](docs/DEVELOPMENT.md) 启动预览。
+- **直接体验**：打开 [在线试玩](https://bobo8886.github.io/star-island/)，电脑和手机均可用浏览器进入。
+- **离线游玩**：在 [正式版下载](https://github.com/bobo8886/star-island/releases/latest) 获取 `star-island-v6.2.2-offline.zip`，解压后打开 `星屿寻迹.html`；也可直接下载单个 HTML。
+- **修改源码**：下载 [完整项目](https://github.com/bobo8886/star-island/archive/refs/heads/main.zip)，按 [开发教程](docs/DEVELOPMENT.md) 启动预览。
 
 游玩不需要注册账号或安装开发工具。手机优先使用在线页面；系统文件预览器未必能运行 HTML 游戏。
 
-## 制作一份专属礼物
+## 🎁 制作一份专属礼物
 
 1. 在欢迎页点击 **「制作一份专属礼物」**，填写收礼人、署名与生日。
 2. 换上自己的五段回忆、照片、语音，在「长信与结局」写好祝福。
@@ -34,16 +38,16 @@
 
 收礼人会从全新的探索进度开始。**仅保存到本机不会改变公开试玩网址**，送人请使用导出的文件。详细步骤见 [个性化与送礼教程](docs/CUSTOMIZATION.md)。
 
-## 在星屿，可以做什么
+## ✨ 在星屿，可以做什么
 
 | 体验 | 小岛里的内容 |
 | --- | --- |
-| 自由探索 | 四座地图、44 个清晰路标、19 个剧情物件和四条支线 |
-| 拾起回忆 | 收集五枚记忆水晶，连成星座，拆开生日盲盒与长信 |
-| 有人同行 | 女旅人主角，搭配向导精灵、男性旅伴，或独自探索 |
-| 一起的小事 | 秋千、沙堡、海边散步、拍照、种花、纸船、水漂和风车 |
-| 树下写信 | 三款信纸、自动保存草稿，下载高清 PNG 或完整 TXT |
-| 看风景与烟花 | 流水、落花、昼夜与原创音乐；通关后四区持续绽放不同烟花 |
+| 🗺️ 自由探索 | 四座地图、44 个清晰路标、19 个剧情物件和四条支线 |
+| 💎 拾起回忆 | 收集五枚记忆水晶，连成星座，拆开生日盲盒与长信 |
+| 🧸 有人同行 | 女旅人主角，搭配向导精灵、男性旅伴，或独自探索 |
+| 🐚 一起的小事 | 秋千、沙堡、海边散步、拍照、种花、纸船、水漂和风车 |
+| 💌 树下写信 | 三款信纸、自动保存草稿，下载高清 PNG 或完整 TXT |
+| 🎆 风景与烟花 | 流水、落花、昼夜与原创音乐；通关后四区持续绽放不同烟花 |
 
 许愿树的信可以随时写，无须通关。保存为图片后，可从微信相册发给朋友；独立树信草稿不会混入送人的生日游戏。
 
@@ -62,7 +66,7 @@
 
 进度、文字与媒体保存在当前浏览器，没有云同步。换设备或清理网站数据前，请在设置中 **「导出时光备份」**。更多操作与常见问题见 [游玩教程](docs/USER_GUIDE.md)。
 
-## 文档导航
+## 📖 文档导航
 
 | 我想…… | 查看文档 |
 | --- | --- |
@@ -85,7 +89,7 @@ tests/     核心检查与浏览器回归
 
 ## 验证
 
-6.2.1 已通过 **8 组核心检查、9 项离线赠礼检查及线上启动验证**。开发时的常用检查：
+6.2.2 已通过 **8 组核心检查、9 项离线赠礼检查及线上启动验证**。开发时的常用检查：
 
 ```sh
 npm test
@@ -101,6 +105,14 @@ npm run check:bundle
 
 这是公开源码、限制商业使用的项目，不采用 MIT。素材来源与工具许可见 [第三方说明](THIRD_PARTY_NOTICES.md)。
 
-[反馈问题 / 提出建议](https://github.com/bobo8886/star-island-time-capsule/issues/new/choose) · [参与贡献](CONTRIBUTING.md) · [私密安全反馈](SECURITY.md) · [版本记录](CHANGELOG.md)
+[反馈问题 / 提出建议](https://github.com/bobo8886/star-island/issues/new/choose) · [参与贡献](CONTRIBUTING.md) · [私密安全反馈](SECURITY.md) · [版本记录](CHANGELOG.md)
+
+<div align="center">
+
+<img src="docs/images/star-island-mark.svg" alt="星屿小标识" width="56" height="56">
 
 感谢每一位认真写祝福、游玩和帮助改进星屿的人。
+
+[⭐ 收藏星屿，下次再来](https://github.com/bobo8886/star-island)
+
+</div>

@@ -2,7 +2,7 @@
 
 ## 维护范围
 
-安全修复以 [最新正式发布版本](https://github.com/bobo8886/star-island-time-capsule/releases/latest) 为维护目标，旧版本不单独承诺回补。反馈时请提供使用的版本或提交号；如果方便，先确认问题是否也出现在最新版本。
+安全修复以 [最新正式发布版本](https://github.com/bobo8886/star-island/releases/latest) 为维护目标，旧版本不单独承诺回补。反馈时请提供使用的版本或提交号；如果方便，先确认问题是否也出现在最新版本。
 
 本项目是静态 H5 游戏。进度、定制文字和树信草稿保存在当前浏览器的 localStorage，上传的照片、语音使用 IndexedDB。项目没有账号系统、云存档服务或自动微信发送功能。公开部署后的 HTML 及其中打包的媒体可以被访问者取得，发布私人礼物前应确认其中的内容适合该分享范围。
 
@@ -10,7 +10,7 @@
 
 涉及未授权脚本执行、私人数据泄露或其他安全边界的问题，请使用 GitHub 的私密漏洞报告：
 
-**[Report a vulnerability / 私密报告漏洞](https://github.com/bobo8886/star-island-time-capsule/security/advisories/new)**
+**[Report a vulnerability / 私密报告漏洞](https://github.com/bobo8886/star-island/security/advisories/new)**
 
 也可以进入仓库 **Security → Advisories → Report a vulnerability**。不要把私人备份、照片、语音、凭据或可利用的漏洞细节放进公开 Issue。若私密报告按钮暂时不可用，请先保留这些敏感资料，不要通过公开 Issue 发布。
 
@@ -24,6 +24,6 @@
 
 ## 普通体验问题
 
-排版、声音、角色动作、剧情或功能建议请通过 [Issue 模板](https://github.com/bobo8886/star-island-time-capsule/issues/new/choose) 反馈。清除浏览器数据导致本机存档消失属于现有存储方式，迁移与备份步骤见 [游玩教程](docs/USER_GUIDE.md) 和 [个性化教程](docs/CUSTOMIZATION.md)。如果你不确定问题是否涉及安全，可以先使用私密渠道描述现象。
+排版、声音、角色动作、剧情或功能建议请通过 [Issue 模板](https://github.com/bobo8886/star-island/issues/new/choose) 反馈。清除浏览器数据导致本机存档消失属于现有存储方式，迁移与备份步骤见 [游玩教程](docs/USER_GUIDE.md) 和 [个性化教程](docs/CUSTOMIZATION.md)。如果你不确定问题是否涉及安全，可以先使用私密渠道描述现象。
 
 维护者会根据影响和复现情况评估报告，并与报告者协调修复和公开说明。项目不承诺固定响应时限，也不会要求报告者公开私人资料。
