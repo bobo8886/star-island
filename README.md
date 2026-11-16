@@ -1,91 +1,100 @@
 <div align="center">
 
-<img src="docs/images/star-island-banner.svg" alt="星屿寻迹 · 给你的时光盲盒。把祝福藏进小岛，让重要的人慢慢找到。" width="760">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/star-island-banner-dark.svg">
+  <img src="docs/images/star-island-banner.svg" alt="Star Island" width="760">
+</picture>
 
-[![最新版本](https://img.shields.io/github/v/release/bobo8886/star-island?label=release&color=c18c78&logo=github)](https://github.com/bobo8886/star-island/releases/latest) [![核心验证](https://github.com/bobo8886/star-island/actions/workflows/check.yml/badge.svg?branch=main)](https://github.com/bobo8886/star-island/actions/workflows/check.yml) [![非商业使用许可](https://img.shields.io/badge/license-Noncommercial-647f67)](LICENSE)
+**A time capsule, made for someone special.**
 
-[![HTML5 Canvas](https://img.shields.io/badge/HTML5-Canvas-c8874d?logo=html5&logoColor=white)](docs/DEVELOPMENT.md) [![支持离线游玩](https://img.shields.io/badge/play-offline-688b91)](docs/USER_GUIDE.md) [![GitHub stars](https://img.shields.io/github/stars/bobo8886/star-island?style=flat&logo=github&color=d3a758)](https://github.com/bobo8886/star-island/stargazers)
+**English** · [简体中文](README.zh-CN.md)
 
-[![在线试玩](https://img.shields.io/badge/▶_在线试玩-527a68?style=for-the-badge)](https://bobo8886.github.io/star-island/) [![下载游戏](https://img.shields.io/badge/↓_下载游戏-9b674d?style=for-the-badge)](https://github.com/bobo8886/star-island/releases/latest) [![制作礼物](https://img.shields.io/badge/♡_制作礼物-a56a80?style=for-the-badge)](docs/CUSTOMIZATION.md)
+[![Latest release](https://img.shields.io/github/v/release/bobo8886/star-island?label=release&color=c18c78&logo=github)](https://github.com/bobo8886/star-island/releases/latest) [![Core checks](https://github.com/bobo8886/star-island/actions/workflows/check.yml/badge.svg?branch=main)](https://github.com/bobo8886/star-island/actions/workflows/check.yml) [![Noncommercial license](https://img.shields.io/badge/license-Noncommercial-647f67)](LICENSE)
 
-[游玩教程](docs/USER_GUIDE.md) · [部署分享](docs/DEPLOYMENT.md) · [更新日志](CHANGELOG.md) · [问题反馈](https://github.com/bobo8886/star-island/issues/new/choose)
+[![HTML5 Canvas](https://img.shields.io/badge/HTML5-Canvas-c8874d?logo=html5&logoColor=white)](docs/DEVELOPMENT.md) [![Offline play](https://img.shields.io/badge/play-offline-688b91)](docs/USER_GUIDE.md) [![GitHub stars](https://img.shields.io/github/stars/bobo8886/star-island?style=flat&logo=github&color=d3a758)](https://github.com/bobo8886/star-island/stargazers)
+
+[![Play](https://img.shields.io/badge/▶_Play-527a68?style=for-the-badge)](https://bobo8886.github.io/star-island/) [![Download](https://img.shields.io/badge/↓_Download-9b674d?style=for-the-badge)](https://github.com/bobo8886/star-island/releases/latest) [![Make a gift](https://img.shields.io/badge/♡_Make_a_gift-a56a80?style=for-the-badge)](docs/CUSTOMIZATION.md)
+
+[Guide](docs/USER_GUIDE.md) · [Sharing](docs/DEPLOYMENT.md) · [Changelog](CHANGELOG.md) · [Feedback](https://github.com/bobo8886/star-island/issues/new/choose)
 
 </div>
 
-一个可编辑、可离线游玩的生日探索 H5 游戏。在四座像素星屿中收集回忆、和旅伴散步、看生日烟花，也可以在许愿树下写一封信。称呼、日期、剧情、照片、语音和最后的祝福，都可以换成自己的内容。
+A customizable birthday adventure that runs in your browser, online or offline. Explore four pixel-art islands, collect memories, spend time with a companion, and write a letter beneath the wishing tree. Make the names, dates, stories, photos, voice messages, and final surprise your own.
 
-> 免费自用、修改、送给别人玩和非商业分享；**禁止商用、转卖及收费交付**。详见 [使用许可](LICENSE)。
+> Free for personal use, modification, gifting, and noncommercial sharing. **Commercial use, resale, and paid delivery are prohibited.** See the [license](LICENSE).
 
-![星屿实景：自由探索、记忆水晶与许愿树](docs/images/island-exploration.png)
+![Explore Star Island: memory crystals, a glowing river, and the wishing tree](docs/images/island-exploration.png)
 
-## 🎮 开始游玩
+## 🎮 Start exploring
 
-- **直接体验**：打开 [在线试玩](https://bobo8886.github.io/star-island/)，电脑和手机均可用浏览器进入。
-- **离线游玩**：在 [正式版下载](https://github.com/bobo8886/star-island/releases/latest) 获取 `star-island-v6.2.2-offline.zip`，解压后打开 `星屿寻迹.html`；也可直接下载单个 HTML。
-- **修改源码**：下载 [完整项目](https://github.com/bobo8886/star-island/archive/refs/heads/main.zip)，按 [开发教程](docs/DEVELOPMENT.md) 启动预览。
+- **Play now:** open the [live game](https://bobo8886.github.io/star-island/) in a desktop or mobile browser.
+- **Play offline:** download `star-island-v6.2.2-offline.zip` from [Releases](https://github.com/bobo8886/star-island/releases/latest), extract it, and open `星屿寻迹.html`. A standalone HTML download is also available.
+- **Work on the code:** get the [source](https://github.com/bobo8886/star-island/archive/refs/heads/main.zip) and follow the [development guide](docs/DEVELOPMENT.md).
 
-游玩不需要注册账号或安装开发工具。手机优先使用在线页面；系统文件预览器未必能运行 HTML 游戏。
+No account or developer tools are required to play. On phones, the live game is the easiest option; file preview apps may not run HTML games. The game interface and detailed guides currently use Simplified Chinese.
 
-## 🎁 制作一份专属礼物
+## 🎁 Make it a personal gift
 
-1. 在欢迎页点击 **「制作一份专属礼物」**，填写收礼人、署名与生日。
-2. 换上自己的五段回忆、照片、语音，在「长信与结局」写好祝福。
-3. 点击 **「保存这份心意 → 导出礼物」**，把生成的 HTML 发给对方，或 [发布成网页链接](docs/DEPLOYMENT.md)。
+1. Choose **“制作一份专属礼物” (Make a personal gift)** on the welcome screen. Enter the recipient, your name, and the birthday.
+2. Add five memories, photos, and voice messages. Write the final letter in the letter and ending section.
+3. Select **“保存这份心意” (Save)**, then **“导出礼物” (Export gift)**. Send the new HTML file or [publish it as a website](docs/DEPLOYMENT.md).
 
-收礼人会从全新的探索进度开始。**仅保存到本机不会改变公开试玩网址**，送人请使用导出的文件。详细步骤见 [个性化与送礼教程](docs/CUSTOMIZATION.md)。
+The recipient starts a fresh journey. **Saving locally does not change the public demo URL**—share the exported file to include your personal content. See the [customization guide](docs/CUSTOMIZATION.md).
 
-## ✨ 在星屿，可以做什么
+## ✨ A small world to discover
 
-| 体验 | 小岛里的内容 |
+| Experience | What awaits |
 | --- | --- |
-| 🗺️ 自由探索 | 四座地图、44 个清晰路标、19 个剧情物件和四条支线 |
-| 💎 拾起回忆 | 收集五枚记忆水晶，连成星座，拆开生日盲盒与长信 |
-| 🧸 有人同行 | 女旅人主角，搭配向导精灵、男性旅伴，或独自探索 |
-| 🐚 一起的小事 | 秋千、沙堡、海边散步、拍照、种花、纸船、水漂和风车 |
-| 💌 树下写信 | 三款信纸、自动保存草稿，下载高清 PNG 或完整 TXT |
-| 🎆 风景与烟花 | 流水、落花、昼夜与原创音乐；通关后四区持续绽放不同烟花 |
+| 🗺️ Explore freely | Four islands, 44 marked locations, 19 story objects, and four side quests |
+| 💎 Collect memories | Find five crystals, connect a constellation, and open the birthday letter |
+| 🧸 Choose a companion | Play as the girl traveler with a guide spirit, a male companion, or on your own |
+| 🐚 Share little moments | Swing, build a sandcastle, stroll, take photos, plant flowers, float paper boats, skip stones, and turn a windmill |
+| 💌 Write a letter | Three stationery themes, saved drafts, high-resolution PNG images, and TXT export |
+| 🎆 Enjoy the scenery | Flowing water, falling petals, day and night, original music, and fireworks after the finale |
 
-许愿树的信可以随时写，无须通关。保存为图片后，可从微信相册发给朋友；独立树信草稿不会混入送人的生日游戏。
+Write beneath the wishing tree at any time. Save the letter as an image to send through WeChat or another app. Your private tree-letter draft is kept out of exported birthday games.
 
 <details>
-<summary><strong>展开看看：许愿树写信页</strong></summary>
+<summary><strong>Preview the letter-writing desk</strong></summary>
 
-![许愿树下的写信页：编辑、信纸主题与实时预览](docs/images/letter-editor.png)
+![The wishing-tree letter editor and stationery preview](docs/images/letter-editor.png)
 
-电脑一边写一边预览，手机可切换写信与预览。信纸宽 1080 像素，长信自动分页。见 [写信与保存教程](docs/USER_GUIDE.md#6-许愿树下写一封信)。
+Edit beside a live preview on desktop, or switch between writing and preview on mobile. Images are 1080 pixels wide; long letters split into pages. See the [letter guide](docs/USER_GUIDE.md#6-许愿树下写一封信).
 
 </details>
 
-## 操作与保存
+## Controls and saves
 
-**电脑**：WASD / 方向键移动，`F` 互动，`Shift` 快走，空格跳跃，`M` 地图，`J` 手记；点击地面或名牌可自动寻路。**手机**：使用左下摇杆与右下互动按钮。
+**Desktop:** WASD or arrow keys to move, `F` to interact, `Shift` to move faster, Space to jump, `M` for the map, and `J` for the journal. Click the ground or a location label to navigate. **Mobile:** use the on-screen joystick and action buttons.
 
-进度、文字与媒体保存在当前浏览器，没有云同步。换设备或清理网站数据前，请在设置中 **「导出时光备份」**。更多操作与常见问题见 [游玩教程](docs/USER_GUIDE.md)。
+Progress, text, and media stay in the current browser; there is no cloud sync. Export a backup from Settings before switching devices or clearing browser data. More help is in the [player guide](docs/USER_GUIDE.md).
 
-## 📖 文档导航
+## 📖 Documentation
 
-| 我想…… | 查看文档 |
+The detailed guides below are in Simplified Chinese.
+
+| I want to… | Read |
 | --- | --- |
-| 学会操作、探索地图、完成生日主线 | [新手游玩](docs/USER_GUIDE.md) |
-| 修改名字、日期、剧情、照片和信件 | [制作专属礼物](docs/CUSTOMIZATION.md) |
-| 把礼物发给朋友，或部署自己的网址 | [部署与分享](docs/DEPLOYMENT.md) |
-| 修改代码、构建离线包、维护项目 | [开发与维护](docs/DEVELOPMENT.md) |
+| Learn the controls, explore, and finish the birthday story | [Player guide](docs/USER_GUIDE.md) |
+| Change names, dates, stories, photos, and letters | [Personalization](docs/CUSTOMIZATION.md) |
+| Send a gift or publish a custom URL | [Deployment and sharing](docs/DEPLOYMENT.md) |
+| Edit the code and build an offline copy | [Development](docs/DEVELOPMENT.md) |
 
-## 项目结构
+## Project layout
 
 ```text
-src/       游戏逻辑、剧情与互动
-assets/    地图、角色与素材来源
-docs/      游玩、定制与开发教程
-scripts/   构建与发布工具
-tests/     核心检查与浏览器回归
+src/       Game logic and stories
+assets/    Artwork and provenance
+docs/      Player and developer guides
+scripts/   Build and release tools
+tests/     Core and browser checks
 ```
 
-`index.html` 是开发入口；`星屿寻迹.html` 是生成的离线游戏。逐文件用途见 [项目结构说明](docs/PROJECT_STRUCTURE.md)。
+`index.html` is the development entry point; `星屿寻迹.html` is the generated offline game. See the [file reference](docs/PROJECT_STRUCTURE.md) for details.
 
-## 验证
+## Verification
 
-6.2.2 已通过 **8 组核心检查、9 项离线赠礼检查及线上启动验证**。开发时的常用检查：
+Version 6.2.2 passed **eight core suites, nine offline gifting checks, and a live-site launch check**. For development:
 
 ```sh
 npm test
@@ -93,22 +102,22 @@ npm run build
 npm run check:bundle
 ```
 
-按功能选择浏览器检查，见 [测试指南](docs/TESTING.md)；结果与适用范围见 [验收记录](VERIFICATION.md)。普通玩家无需运行这些命令。
+Choose browser checks from the [testing guide](docs/TESTING.md). Results and coverage limits are recorded in [VERIFICATION.md](VERIFICATION.md). These commands are not required to play.
 
-## 许可与参与
+## License and contributions
 
-本项目采用 [自定义非商业许可](LICENSE)：允许免费使用、修改和赠礼，禁止商用、转卖、收费定制交付及广告变现。再次分发游戏需保留许可和原作者声明；自己的照片、语音和文字仍归原权利人。完整声明随离线游戏与导出的礼物保留。
+The [custom noncommercial license](LICENSE) allows free personal use, modification, gifting, and noncommercial sharing. Commercial use, resale, paid customization or delivery, and advertising monetization are prohibited. Keep the license and attribution when redistributing the game. Your own photos, voice recordings, and writing remain yours or their original owners'. Exported games retain the full notices.
 
-这是公开源码、限制商业使用的项目，不采用 MIT。素材来源与工具许可见 [第三方说明](THIRD_PARTY_NOTICES.md)。
+This is a source-available project with commercial-use restrictions, not an MIT-licensed project. The Chinese license text is authoritative; see [third-party notices](THIRD_PARTY_NOTICES.md) for asset and tool provenance.
 
-[反馈问题 / 提出建议](https://github.com/bobo8886/star-island/issues/new/choose) · [参与贡献](CONTRIBUTING.md) · [私密安全反馈](SECURITY.md) · [版本记录](CHANGELOG.md)
+[Report a problem](https://github.com/bobo8886/star-island/issues/new/choose) · [Contribute](CONTRIBUTING.md) · [Report a security issue privately](SECURITY.md) · [Changelog](CHANGELOG.md)
 
 <div align="center">
 
-<img src="docs/images/star-island-mark.svg" alt="星屿小标识" width="56" height="56">
+<img src="docs/images/star-island-mark.svg" alt="Star Island emblem" width="48" height="48">
 
-感谢每一位认真写祝福、游玩和帮助改进星屿的人。
+Thank you for sharing your stories and helping this little island grow.
 
-[⭐ 收藏星屿，下次再来](https://github.com/bobo8886/star-island)
+[⭐ Keep Star Island close](https://github.com/bobo8886/star-island)
 
 </div>
