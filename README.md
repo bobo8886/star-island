@@ -9,13 +9,13 @@
 
 **English** · [简体中文](README.zh-CN.md)
 
-[![Latest release](https://img.shields.io/github/v/release/bobo8886/star-island?label=release&color=c18c78&logo=github)](https://github.com/bobo8886/star-island/releases/latest) [![Core checks](https://github.com/bobo8886/star-island/actions/workflows/check.yml/badge.svg?branch=main)](https://github.com/bobo8886/star-island/actions/workflows/check.yml) [![Noncommercial license](https://img.shields.io/badge/license-Noncommercial-647f67)](LICENSE)
+[![Latest release](https://img.shields.io/github/v/release/Bobo688li/star-island?label=release&color=c18c78&logo=github)](https://github.com/Bobo688li/star-island/releases/latest) [![Core checks](https://github.com/Bobo688li/star-island/actions/workflows/check.yml/badge.svg?branch=main)](https://github.com/Bobo688li/star-island/actions/workflows/check.yml) [![Noncommercial license](https://img.shields.io/badge/license-Noncommercial-647f67)](LICENSE)
 
-[![HTML5 Canvas](https://img.shields.io/badge/HTML5-Canvas-c8874d?logo=html5&logoColor=white)](docs/DEVELOPMENT.md) [![Offline play](https://img.shields.io/badge/play-offline-688b91)](docs/USER_GUIDE.md) [![GitHub stars](https://img.shields.io/github/stars/bobo8886/star-island?style=flat&logo=github&color=d3a758)](https://github.com/bobo8886/star-island/stargazers)
+[![HTML5 Canvas](https://img.shields.io/badge/HTML5-Canvas-c8874d?logo=html5&logoColor=white)](docs/DEVELOPMENT.md) [![Offline play](https://img.shields.io/badge/play-offline-688b91)](docs/USER_GUIDE.md) [![GitHub stars](https://img.shields.io/github/stars/Bobo688li/star-island?style=flat&logo=github&color=d3a758)](https://github.com/Bobo688li/star-island/stargazers)
 
-[![Play](https://img.shields.io/badge/▶_Play-527a68?style=for-the-badge)](https://bobo8886.github.io/star-island/) [![Download](https://img.shields.io/badge/↓_Download-9b674d?style=for-the-badge)](https://github.com/bobo8886/star-island/releases/latest) [![Make a gift](https://img.shields.io/badge/♡_Make_a_gift-a56a80?style=for-the-badge)](docs/CUSTOMIZATION.md)
+[![Play](https://img.shields.io/badge/▶_Play-527a68?style=for-the-badge)](https://bobo688li.github.io/star-island/) [![Download](https://img.shields.io/badge/↓_Download-9b674d?style=for-the-badge)](https://github.com/Bobo688li/star-island/releases/latest) [![Make a gift](https://img.shields.io/badge/♡_Make_a_gift-a56a80?style=for-the-badge)](docs/CUSTOMIZATION.md)
 
-[Guide](docs/USER_GUIDE.md) · [Sharing](docs/DEPLOYMENT.md) · [Changelog](CHANGELOG.md) · [Feedback](https://github.com/bobo8886/star-island/issues/new/choose)
+[Guide](docs/USER_GUIDE.md) · [Sharing](docs/DEPLOYMENT.md) · [Changelog](CHANGELOG.md) · [Feedback](https://github.com/Bobo688li/star-island/issues/new/choose)
 
 </div>
 
@@ -27,9 +27,9 @@ A customizable birthday adventure that runs in your browser, online or offline. 
 
 ## 🎮 Start exploring
 
-- **Play now:** open the [live game](https://bobo8886.github.io/star-island/) in a desktop or mobile browser.
-- **Play offline:** download `star-island-v6.2.2-offline.zip` from [Releases](https://github.com/bobo8886/star-island/releases/latest), extract it, and open `星屿寻迹.html`. A standalone HTML download is also available.
-- **Work on the code:** get the [source](https://github.com/bobo8886/star-island/archive/refs/heads/main.zip) and follow the [development guide](docs/DEVELOPMENT.md).
+- **Play now:** open the [live game](https://bobo688li.github.io/star-island/) in a desktop or mobile browser.
+- **Play offline:** download `star-island-v6.2.2-offline.zip` from [Releases](https://github.com/Bobo688li/star-island/releases/latest), extract it, and open `星屿寻迹.html`. A standalone HTML download is also available.
+- **Work on the code:** get the [source](https://github.com/Bobo688li/star-island/archive/refs/heads/main.zip) and follow the [development guide](docs/DEVELOPMENT.md).
 
 No account or developer tools are required to play. On phones, the live game is the easiest option; file preview apps may not run HTML games.
 
@@ -112,7 +112,7 @@ The [custom noncommercial license](LICENSE) allows free personal use, modificati
 
 This is a source-available project with commercial-use restrictions, not an MIT-licensed project. The Chinese license text is authoritative; see [third-party notices](THIRD_PARTY_NOTICES.md) for asset and tool provenance.
 
-[Report a problem](https://github.com/bobo8886/star-island/issues/new/choose) · [Contribute](CONTRIBUTING.md) · [Report a security issue privately](SECURITY.md) · [Changelog](CHANGELOG.md)
+[Report a problem](https://github.com/Bobo688li/star-island/issues/new/choose) · [Contribute](CONTRIBUTING.md) · [Report a security issue privately](SECURITY.md) · [Changelog](CHANGELOG.md)
 
 <div align="center">
 
@@ -120,6 +120,6 @@ This is a source-available project with commercial-use restrictions, not an MIT-
 
 Thank you for sharing your stories and helping this little island grow.
 
-[⭐ Keep Star Island close](https://github.com/bobo8886/star-island)
+[⭐ Keep Star Island close](https://github.com/Bobo688li/star-island)
 
 </div>

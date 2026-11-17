@@ -11,7 +11,7 @@
 使用 Git：
 
 ```sh
-git clone https://github.com/bobo8886/star-island.git
+git clone https://github.com/Bobo688li/star-island.git
 cd star-island
 ```
 

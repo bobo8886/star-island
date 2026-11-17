@@ -10,7 +10,7 @@
 | 制作自己的生日礼物 | [个性化教程](docs/CUSTOMIZATION.md) |
 | 发布网页或把礼物发给朋友 | [部署与分享](docs/DEPLOYMENT.md) |
 | 修改代码、打包和测试 | [开发与维护](docs/DEVELOPMENT.md) |
-| 报告错误、提出功能建议 | [创建 Issue](https://github.com/bobo8886/star-island/issues/new/choose) |
+| 报告错误、提出功能建议 | [创建 Issue](https://github.com/Bobo688li/star-island/issues/new/choose) |
 | 报告涉及数据泄露等安全问题 | [安全反馈说明](SECURITY.md)，请使用私密渠道 |
 
 提交 Issue 前，可以先搜索已有讨论。描述你正在做什么、实际发生了什么，以及希望看到的结果；问题反馈模板会提示需要填写的信息。不需要懂代码，也不需要提交私人照片或完整存档。

@@ -34,11 +34,11 @@
 
 ## 教程与更新
 
-- 仓库：https://github.com/bobo8886/star-island
-- 在线试玩：https://bobo8886.github.io/star-island/
-- 正式版本：https://github.com/bobo8886/star-island/releases
-- 游玩教程：https://github.com/bobo8886/star-island/blob/main/docs/USER_GUIDE.md
-- 修改信息：https://github.com/bobo8886/star-island/blob/main/docs/CUSTOMIZATION.md
+- 仓库：https://github.com/Bobo688li/star-island
+- 在线试玩：https://bobo688li.github.io/star-island/
+- 正式版本：https://github.com/Bobo688li/star-island/releases
+- 游玩教程：https://github.com/Bobo688li/star-island/blob/main/docs/USER_GUIDE.md
+- 修改信息：https://github.com/Bobo688li/star-island/blob/main/docs/CUSTOMIZATION.md
 
 离线玩家包包含游戏和授权说明。需要全部源码、原始素材和开发工具时，可下载
 Release 页面提供的 Source code ZIP，或从仓库下载完整项目。

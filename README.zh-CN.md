@@ -11,13 +11,13 @@
 
 [English](README.md) · **简体中文**
 
-[![最新版本](https://img.shields.io/github/v/release/bobo8886/star-island?label=release&color=c18c78&logo=github)](https://github.com/bobo8886/star-island/releases/latest) [![核心验证](https://github.com/bobo8886/star-island/actions/workflows/check.yml/badge.svg?branch=main)](https://github.com/bobo8886/star-island/actions/workflows/check.yml) [![非商业使用许可](https://img.shields.io/badge/license-Noncommercial-647f67)](LICENSE)
+[![最新版本](https://img.shields.io/github/v/release/Bobo688li/star-island?label=release&color=c18c78&logo=github)](https://github.com/Bobo688li/star-island/releases/latest) [![核心验证](https://github.com/Bobo688li/star-island/actions/workflows/check.yml/badge.svg?branch=main)](https://github.com/Bobo688li/star-island/actions/workflows/check.yml) [![非商业使用许可](https://img.shields.io/badge/license-Noncommercial-647f67)](LICENSE)
 
-[![HTML5 Canvas](https://img.shields.io/badge/HTML5-Canvas-c8874d?logo=html5&logoColor=white)](docs/DEVELOPMENT.md) [![支持离线游玩](https://img.shields.io/badge/play-offline-688b91)](docs/USER_GUIDE.md) [![GitHub stars](https://img.shields.io/github/stars/bobo8886/star-island?style=flat&logo=github&color=d3a758)](https://github.com/bobo8886/star-island/stargazers)
+[![HTML5 Canvas](https://img.shields.io/badge/HTML5-Canvas-c8874d?logo=html5&logoColor=white)](docs/DEVELOPMENT.md) [![支持离线游玩](https://img.shields.io/badge/play-offline-688b91)](docs/USER_GUIDE.md) [![GitHub stars](https://img.shields.io/github/stars/Bobo688li/star-island?style=flat&logo=github&color=d3a758)](https://github.com/Bobo688li/star-island/stargazers)
 
-[![在线试玩](https://img.shields.io/badge/▶_在线试玩-527a68?style=for-the-badge)](https://bobo8886.github.io/star-island/) [![下载游戏](https://img.shields.io/badge/↓_下载游戏-9b674d?style=for-the-badge)](https://github.com/bobo8886/star-island/releases/latest) [![制作礼物](https://img.shields.io/badge/♡_制作礼物-a56a80?style=for-the-badge)](docs/CUSTOMIZATION.md)
+[![在线试玩](https://img.shields.io/badge/▶_在线试玩-527a68?style=for-the-badge)](https://bobo688li.github.io/star-island/) [![下载游戏](https://img.shields.io/badge/↓_下载游戏-9b674d?style=for-the-badge)](https://github.com/Bobo688li/star-island/releases/latest) [![制作礼物](https://img.shields.io/badge/♡_制作礼物-a56a80?style=for-the-badge)](docs/CUSTOMIZATION.md)
 
-[游玩教程](docs/USER_GUIDE.md) · [部署分享](docs/DEPLOYMENT.md) · [更新日志](CHANGELOG.md) · [问题反馈](https://github.com/bobo8886/star-island/issues/new/choose)
+[游玩教程](docs/USER_GUIDE.md) · [部署分享](docs/DEPLOYMENT.md) · [更新日志](CHANGELOG.md) · [问题反馈](https://github.com/Bobo688li/star-island/issues/new/choose)
 
 </div>
 
@@ -29,9 +29,9 @@
 
 ## 🎮 开始游玩
 
-- **直接体验**：打开 [在线试玩](https://bobo8886.github.io/star-island/)，电脑和手机均可用浏览器进入。
-- **离线游玩**：在 [正式版下载](https://github.com/bobo8886/star-island/releases/latest) 获取 `star-island-v6.2.2-offline.zip`，解压后打开 `星屿寻迹.html`；也可直接下载单个 HTML。
-- **修改源码**：下载 [完整项目](https://github.com/bobo8886/star-island/archive/refs/heads/main.zip)，按 [开发教程](docs/DEVELOPMENT.md) 启动预览。
+- **直接体验**：打开 [在线试玩](https://bobo688li.github.io/star-island/)，电脑和手机均可用浏览器进入。
+- **离线游玩**：在 [正式版下载](https://github.com/Bobo688li/star-island/releases/latest) 获取 `star-island-v6.2.2-offline.zip`，解压后打开 `星屿寻迹.html`；也可直接下载单个 HTML。
+- **修改源码**：下载 [完整项目](https://github.com/Bobo688li/star-island/archive/refs/heads/main.zip)，按 [开发教程](docs/DEVELOPMENT.md) 启动预览。
 
 游玩不需要注册账号或安装开发工具。手机优先使用在线页面；系统文件预览器未必能运行 HTML 游戏。
 
@@ -112,7 +112,7 @@ npm run check:bundle
 
 这是公开源码、限制商业使用的项目，不采用 MIT。素材来源与工具许可见 [第三方说明](THIRD_PARTY_NOTICES.md)。
 
-[反馈问题 / 提出建议](https://github.com/bobo8886/star-island/issues/new/choose) · [参与贡献](CONTRIBUTING.md) · [私密安全反馈](SECURITY.md) · [版本记录](CHANGELOG.md)
+[反馈问题 / 提出建议](https://github.com/Bobo688li/star-island/issues/new/choose) · [参与贡献](CONTRIBUTING.md) · [私密安全反馈](SECURITY.md) · [版本记录](CHANGELOG.md)
 
 <div align="center">
 
@@ -120,6 +120,6 @@ npm run check:bundle
 
 感谢每一位认真写祝福、游玩和帮助改进星屿的人。
 
-[⭐ 收藏星屿，下次再来](https://github.com/bobo8886/star-island)
+[⭐ 收藏星屿，下次再来](https://github.com/Bobo688li/star-island)
 
 </div>

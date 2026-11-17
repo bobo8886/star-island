@@ -1,6 +1,12 @@
 # 更新日志
 
-这里记录《星屿寻迹：给你的时光盲盒》的功能与分发变化。6.0、6.1、6.2.0 的条目根据 [`VERIFICATION.md`](VERIFICATION.md) 中的开发与验收记录整理；版本条目不表示这些历史阶段都曾建立独立的 GitHub 标签或 Release。可下载版本以 [GitHub Releases](https://github.com/bobo8886/star-island/releases) 为准。
+这里记录《星屿寻迹：给你的时光盲盒》的功能与分发变化。6.0、6.1、6.2.0 的条目根据 [`VERIFICATION.md`](VERIFICATION.md) 中的开发与验收记录整理；版本条目不表示这些历史阶段都曾建立独立的 GitHub 标签或 Release。可下载版本以 [GitHub Releases](https://github.com/Bobo688li/star-island/releases) 为准。
+
+## 仓库迁移 · 2026-11-17
+
+- 仓库所有者由 `bobo8886` 转移到 `Bobo688li`，保留提交历史、标签和已有 Release。
+- 更新在线试玩、README 徽章、教程、反馈入口和离线版内嵌链接；游戏版本仍为 6.3.0。
+- 新试玩地址为 `https://bobo688li.github.io/star-island/`；旧站点存档需使用「时光备份」导入新站点。
 
 ## 6.3.0 · 2026-11-16
 

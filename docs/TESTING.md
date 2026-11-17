@@ -18,7 +18,7 @@ npm run check:bundle
 
 语言改动另运行 `python tests/language-flow.py` 和 `python tests/language-offline.py`（先 `npm start`，并生成最新单文件）。检查真实 UI 选择、英文通关、信纸 PNG、390px 布局、切换保留自定义内容、离线礼物和存储不可用场景。详情见 [双语维护说明](LOCALIZATION.md)。
 
-向 `main` 推送或提交 Pull Request 时，[GitHub Actions](https://github.com/bobo8886/star-island/actions/workflows/check.yml) 会自动运行上述检查，并确认提交的离线文件与重新构建的结果一致。首页的 Core checks 徽章展示实际结果；浏览器与视觉回归仍需按下方指南单独运行。
+向 `main` 推送或提交 Pull Request 时，[GitHub Actions](https://github.com/Bobo688li/star-island/actions/workflows/check.yml) 会自动运行上述检查，并确认提交的离线文件与重新构建的结果一致。首页的 Core checks 徽章展示实际结果；浏览器与视觉回归仍需按下方指南单独运行。
 
 纯文档修改检查链接、示例和排版即可。代码或美术改动还应实际体验受影响的功能；数值通过不代替角色动作与画面的目测。
 

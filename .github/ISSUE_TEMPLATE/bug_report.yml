@@ -6,7 +6,7 @@ body:
     attributes:
       value: |
         感谢帮助改进星屿寻迹。请用通用示例描述问题，不要上传私人照片、语音、完整存档或访问凭据。
-        涉及数据泄露、未授权脚本执行等安全问题，请改用 [私密漏洞报告](https://github.com/bobo8886/star-island/security/advisories/new)。
+        涉及数据泄露、未授权脚本执行等安全问题，请改用 [私密漏洞报告](https://github.com/Bobo688li/star-island/security/advisories/new)。
   - type: input
     id: version
     attributes:
